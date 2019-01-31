@@ -5,6 +5,10 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/ModularAPI" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/http_api" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/http_api/v1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/http_api/modules" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/http_api/modules/v1" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

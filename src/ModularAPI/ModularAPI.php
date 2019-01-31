@@ -14,10 +14,11 @@
          * Constructs ModularAPI Library
          *
          * ModularAPI constructor.
+         * @param string $Modules
          * @param string $ConfigurationFile
          * @param bool $EstablishDatabaseConnection
          */
-        public function __construct(string $ConfigurationFile = 'default', bool $EstablishDatabaseConnection = true)
+        public function __construct(string $Modules, string $ConfigurationFile = 'default', bool $EstablishDatabaseConnection = true)
         {
             if($ConfigurationFile == 'default')
             {
