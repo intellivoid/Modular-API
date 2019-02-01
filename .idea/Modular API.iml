@@ -9,6 +9,10 @@
       <sourceFolder url="file://$MODULE_DIR$/http_api/v1" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/http_api/modules" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/http_api/modules/v1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/ModularAPI/Objects" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/ModularAPI/Abstracts" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/ModularAPI/Objects/AccessKey" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/ModularAPI/Configurations" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
