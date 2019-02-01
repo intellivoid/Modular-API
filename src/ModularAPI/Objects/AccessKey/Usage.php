@@ -2,6 +2,8 @@
 
     namespace ModularAPI\Objects\AccessKey;
     use ModularAPI\Abstracts\UsageType;
+    use ModularAPI\Exceptions\AccessKeyExpiredException;
+    use ModularAPI\Exceptions\UsageExceededException;
 
     /**
      * Class Usage
@@ -152,4 +154,48 @@
             return false;
         }
 
+        /**
+         * Tracks and checks usage, throws an exception if the key expired.
+         * If TrackExceeding is set to true, checks if the usage has exceeded, if not it
+         *
+         * @param bool $trackExceeding
+         * @throws AccessKeyExpiredException
+         * @throws UsageExceededException
+         */
+        public function trackUsage(bool $trackExceeding = true)
+        {
+            switch($this->UsageType)
+            {
+                case UsageType::ExpiryLimit:
+                    if($this->expired() == true)
+                    {
+                        throw new AccessKeyExpiredException();
+                    }
+                    break;
+
+                case UsageType::DateIntervalLimit:
+                    if($trackExceeding == true)
+                    {
+                        if($this->usageExceeded() == true)
+                        {
+                            throw new UsageExceededException();
+                        }
+
+                        $this->CurrentUsage += 1;
+                    }
+                    break;
+
+                case UsageType::UsageLimit:
+                    if($trackExceeding == true)
+                    {
+                        if($this->usageExceeded() == true)
+                        {
+                            throw new UsageExceededException();
+                        }
+
+                        $this->CurrentUsage += 1;
+                    }
+                    break;
+            }
+        }
     }
