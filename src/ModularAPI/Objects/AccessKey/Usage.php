@@ -204,7 +204,7 @@
          *
          * @return array
          */
-        public function ToArray(): array
+        public function toArray(): array
         {
             return array(
                 'limit' => $this->Limit,
@@ -222,7 +222,7 @@
          * @param array $data
          * @return Usage
          */
-        public static function FromArray(array $data): Usage
+        public static function fromArray(array $data): Usage
         {
             $UsageObject = new Usage();
 

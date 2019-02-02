@@ -2,6 +2,7 @@
 
     namespace ModularAPI\Objects;
     use ModularAPI\Abstracts\AccessKeyStatus;
+    use ModularAPI\Objects\AccessKey\Usage;
 
     /**
      * Class AccessKey
@@ -31,9 +32,16 @@
         public $PublicKey;
 
         /**
+         * The status of this access key
+         *
          * @var AccessKeyStatus
          */
         public $State;
 
-        public $UsageData;
+        /**
+         * The usage and validation for this access key
+         *
+         * @var Usage
+         */
+        public $Usage;
     }
