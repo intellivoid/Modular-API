@@ -3,6 +3,7 @@
     namespace ModularAPI\Objects;
     use ModularAPI\Abstracts\AccessKeyStatus;
     use ModularAPI\Objects\AccessKey\Analytics;
+    use ModularAPI\Objects\AccessKey\Permissions;
     use ModularAPI\Objects\AccessKey\Usage;
 
     /**
@@ -47,6 +48,13 @@
         public $Usage;
 
         /**
+         * Module permission access data
+         *
+         * @var Permissions
+         */
+        public $Permissions;
+
+        /**
          * The analytics data for this access key
          *
          * @var Analytics
@@ -65,6 +73,7 @@
                 'public_id' => $this->PublicKey,
                 'state' => $this->State,
                 'usage' => $this->Usage->toArray(),
+                'permissions' => $this->Permissions->toArray(),
                 'analytics' => $this->Analytics->toArray()
             );
         }
@@ -97,6 +106,11 @@
             if(isset($data['usage']))
             {
                 $AccessKeyObject->Usage = Usage::fromArray($data['usage']);
+            }
+
+            if(isset($data['permissions']))
+            {
+                $AccessKeyObject->Permissions = Permissions::fromArray($data['permissions']);
             }
 
             if(isset($data['analytics']))
