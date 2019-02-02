@@ -23,6 +23,13 @@
         public $LastMonthUsage;
 
         /**
+         * Indicates if Last Month Data is available or not
+         *
+         * @var bool
+         */
+        public $LastMonthAvailable;
+
+        /**
          * The ID of this month
          *
          * @var string
@@ -37,6 +44,13 @@
         public $CurrentMonthUsage;
 
         /**
+         * Indicates if the current month data is available or not
+         *
+         * @var bool
+         */
+        public $CurrentMonthAvailable;
+
+        /**
          * Converts the object to an array
          *
          * @return array
@@ -46,10 +60,12 @@
             return array(
                 'last_month' => array(
                     'id' => $this->LastMonthID,
+                    'available' => $this->LastMonthAvailable,
                     'usage' => $this->LastMonthUsage
                 ),
                 'current_month' => array(
                     'id' => $this->CurrentMonthID,
+                    'available' => $this->CurrentMonthAvailable,
                     'usage' => $this->CurrentMonthUsage
                 )
             );
@@ -68,13 +84,15 @@
             if(isset($data['last_month']))
             {
                 $AnalyticsObject->LastMonthID = $data['last_month']['id'];
+                $AnalyticsObject->LastMonthAvailable = $data['last_month']['available'];
                 $AnalyticsObject->LastMonthUsage = $data['last_month']['usage'];
             }
 
             if(isset($data['current_month']))
             {
-                $AnalyticsObject->LastMonthID = $data['current_month']['id'];
-                $AnalyticsObject->LastMonthUsage = $data['current_month']['usage'];
+                $AnalyticsObject->CurrentMonthID = $data['current_month']['id'];
+                $AnalyticsObject->CurrentMonthAvailable = $data['current_month']['available'];
+                $AnalyticsObject->CurrentMonthUsage = $data['current_month']['usage'];
             }
 
             return $AnalyticsObject;

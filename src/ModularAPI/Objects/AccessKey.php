@@ -4,6 +4,7 @@
     use ModularAPI\Abstracts\AccessKeyStatus;
     use ModularAPI\Objects\AccessKey\Analytics;
     use ModularAPI\Objects\AccessKey\Permissions;
+    use ModularAPI\Objects\AccessKey\Signatures;
     use ModularAPI\Objects\AccessKey\Usage;
 
     /**
@@ -34,6 +35,9 @@
         public $PublicKey;
 
         /**
+        public $Signature;
+
+        /**
          * The status of this access key
          *
          * @var AccessKeyStatus
@@ -62,6 +66,13 @@
         public $Analytics;
 
         /**
+         * Encryption signature information
+         *
+         * @var Signatures
+         */
+        public $Signatures;
+
+        /**
          * Creates an array from the object
          *
          * @return array
@@ -74,7 +85,8 @@
                 'state' => $this->State,
                 'usage' => $this->Usage->toArray(),
                 'permissions' => $this->Permissions->toArray(),
-                'analytics' => $this->Analytics->toArray()
+                'analytics' => $this->Analytics->toArray(),
+                'signatures' => $this->Signatures->toArray()
             );
         }
 
@@ -116,6 +128,11 @@
             if(isset($data['analytics']))
             {
                 $AccessKeyObject->Analytics = Analytics::fromArray($data['analytics']);
+            }
+
+            if(isset($data['signatures']))
+            {
+                $AccessKeyObject->Signatures = Signatures::fromArray($data['signatures']);
             }
 
             return $AccessKeyObject;
