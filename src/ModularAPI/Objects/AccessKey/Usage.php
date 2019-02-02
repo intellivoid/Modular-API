@@ -198,4 +198,64 @@
                     break;
             }
         }
+
+        /**
+         * Converts the object to a array
+         *
+         * @return array
+         */
+        public function ToArray(): array
+        {
+            return array(
+                'limit' => $this->Limit,
+                'usage_type' => $this->UsageType,
+                'current_usage' => $this->CurrentUsage,
+                'reset_interval' => $this->ResetInterval,
+                'next_interval' => $this->NextInterval,
+                'expires' => $this->Expires
+            );
+        }
+
+        /**
+         * Creates the object from array
+         *
+         * @param array $data
+         * @return Usage
+         */
+        public static function FromArray(array $data): Usage
+        {
+            $UsageObject = new Usage();
+
+            if(isset($data['limit']) == true)
+            {
+                $UsageObject->Limit = (int)$data['limit'];
+            }
+
+            if(isset($data['usage_type']))
+            {
+                $UsageObject->UsageType = (int)$data['usage_type'];
+            }
+
+            if(isset($data['current_usage']))
+            {
+                $UsageObject->CurrentUsage = (int)$data['current_usage'];
+            }
+
+            if(isset($data['reset_interval']))
+            {
+                $UsageObject->ResetInterval = (int)$data['reset_interval'];
+            }
+
+            if(isset($data['next_interval']))
+            {
+                $UsageObject->NextInterval = (int)$data['next_interval'];
+            }
+
+            if(isset($data['expires']))
+            {
+                $UsageObject->Expires = (int)$data['expires'];
+            }
+
+            return $UsageObject;
+        }
     }
