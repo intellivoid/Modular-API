@@ -32,12 +32,15 @@
             $QueryParts = explode('/', $Query);
             if(count($QueryParts) == 2)
             {
-                $RequestQuery = new RequestQuery();
-                $RequestQuery->Version = $QueryParts[0];
-                $RequestQuery->Module = $QueryParts[1];
-                $RequestQuery->RequestMethod = strtoupper($_SERVER['REQUEST_METHOD']);
+                if(strlen($QueryParts[1]) > 0)
+                {
+                    $RequestQuery = new RequestQuery();
+                    $RequestQuery->Version = $QueryParts[0];
+                    $RequestQuery->Module = $QueryParts[1];
+                    $RequestQuery->RequestMethod = strtoupper($_SERVER['REQUEST_METHOD']);
 
-                return $RequestQuery;
+                    return $RequestQuery;
+                }
             }
 
             throw new InvalidRequestQueryException();
