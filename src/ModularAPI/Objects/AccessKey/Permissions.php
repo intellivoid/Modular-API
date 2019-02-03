@@ -62,6 +62,31 @@
         }
 
         /**
+         * Loads a configuration
+         *
+         * @param array $data
+         */
+        public function loadConfiguration(array $data)
+        {
+            switch($data['type'])
+            {
+                case 'allow_all_permissions':
+                    $this->Modules = array();
+                    $this->AllowAll = true;
+                    break;
+
+                case 'module_permissions':
+                    $this->Modules = array();
+                    $this->AllowAll = false;
+                    foreach($data['modules'] as $module)
+                    {
+                        $this->addPermission($module);
+                    }
+                    break;
+            }
+        }
+
+        /**
          * Converts the object to an array
          *
          * @return array

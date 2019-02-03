@@ -73,6 +73,13 @@
         public $Signatures;
 
         /**
+         * The Unix  Timestamp that this Access Key was created
+         *
+         * @var int
+         */
+        public $CreationDate;
+
+        /**
          * Creates an array from the object
          *
          * @return array
@@ -86,7 +93,8 @@
                 'usage' => $this->Usage->toArray(),
                 'permissions' => $this->Permissions->toArray(),
                 'analytics' => $this->Analytics->toArray(),
-                'signatures' => $this->Signatures->toArray()
+                'signatures' => $this->Signatures->toArray(),
+                'creation_date' => $this->CreationDate
             );
         }
 
@@ -133,6 +141,11 @@
             if(isset($data['signatures']))
             {
                 $AccessKeyObject->Signatures = Signatures::fromArray($data['signatures']);
+            }
+
+            if(isset($data['creation_date']))
+            {
+                $AccessKeyObject->CreationDate = (int)$data['creation_date'];
             }
 
             return $AccessKeyObject;

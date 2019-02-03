@@ -19,7 +19,7 @@
     <column id="11" parent="10" name="id">
       <Position>1</Position>
       <Comment>The ID of the Access Key</Comment>
-      <DataType>int(11)|0</DataType>
+      <DataType>int(255)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
@@ -31,9 +31,9 @@
     <column id="13" parent="10" name="state">
       <Position>3</Position>
       <Comment>The state of the access key</Comment>
-      <DataType>int(11)|0</DataType>
+      <DataType>int(255)|0</DataType>
     </column>
-    <column id="14" parent="10" name="usge">
+    <column id="14" parent="10" name="usage_data">
       <Position>4</Position>
       <Comment>Usage data which determines if the Access Key can still be used</Comment>
       <DataType>text|0</DataType>
@@ -53,16 +53,20 @@
       <Comment>Encryption Signatures for authentication purposes</Comment>
       <DataType>text|0</DataType>
     </column>
-    <index id="18" parent="10" name="access_keys_id_uindex">
+    <column id="18" parent="10" name="creation_date">
+      <Position>8</Position>
+      <DataType>int(255)|0</DataType>
+    </column>
+    <index id="19" parent="10" name="access_keys_id_uindex">
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="19" parent="10" name="PRIMARY">
+    <key id="20" parent="10" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="20" parent="10" name="access_keys_id_uindex">
+    <key id="21" parent="10" name="access_keys_id_uindex">
       <ColNames>id</ColNames>
       <UnderlyingIndexName>access_keys_id_uindex</UnderlyingIndexName>
     </key>

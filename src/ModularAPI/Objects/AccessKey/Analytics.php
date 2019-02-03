@@ -1,6 +1,8 @@
 <?php
 
     namespace ModularAPI\Objects\AccessKey;
+    use ModularAPI\Utilities\Builder;
+    use ModularAPI\Utilities\Hashing;
 
     /**
      * Class Analytics
@@ -49,6 +51,25 @@
          * @var bool
          */
         public $CurrentMonthAvailable;
+
+        /**
+         * Tracks Usage
+         */
+        public function trackUsage()
+        {
+            // Determine if the month ID updated
+            if($this->CurrentMonthID !== Hashing::calculateMonthID((int)date('n'), (int)date('Y')))
+            {
+                $this->LastMonthAvailable = true;
+                $this->LastMonthID = $this->CurrentMonthID;
+                $this->LastMonthUsage = $this->CurrentMonthUsage;
+                $this->CurrentMonthAvailable = true;
+                $this->CurrentMonthID = Hashing::calculateMonthID((int)date('n'), (int)date('Y'));
+                $this->CurrentMonthUsage = Builder::createMonthArray();
+            }
+
+            $this->CurrentMonthUsage[(int)date('n') - 1] += 1;
+        }
 
         /**
          * Converts the object to an array
