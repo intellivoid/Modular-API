@@ -31,7 +31,7 @@
         {
             if (!in_array(strtoupper($module), $this->Modules))
             {
-                $this->Modules[] = strtolower($module);
+                $this->Modules[] = strtoupper($module);
             }
         }
 
@@ -42,7 +42,7 @@
          */
         public function removePermission(string $module)
         {
-            $this->Modules = array_diff($this->Modules, [strtolower($module)]);
+            $this->Modules = array_diff($this->Modules, [strtoupper($module)]);
         }
 
         /**
@@ -53,7 +53,7 @@
          */
         public function hasPermission(string $module): bool
         {
-            if (in_array($module, $this->Modules))
+            if (in_array(strtoupper($module), $this->Modules))
             {
                 return True;
             }

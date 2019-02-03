@@ -92,7 +92,7 @@
          */
         public static function calculatePublicKey(string $privateSignature, string $publicSignature, string $timeSignature): string
         {
-            return hash('haval256,5', $privateSignature . hash('haval160,5', $publicSignature), hash('sha256', $timeSignature));
+            return hash('haval256,4', $privateSignature . hash('haval160,5', $publicSignature) . hash('sha256', $timeSignature));
         }
 
         /**

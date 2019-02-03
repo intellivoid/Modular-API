@@ -116,6 +116,8 @@
                     throw new InvalidAccessKeyStatusException();
             }
 
+            $AccessKeyObject->CreationDate = time();
+
             return $this->Manager->register($AccessKeyObject);
         }
     }

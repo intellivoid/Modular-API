@@ -41,6 +41,7 @@
         public function register(AccessKey $accessKey): AccessKey
         {
             $PublicID = $this->modularAPI->Database->real_escape_string($accessKey->PublicID);
+            $PublicKey = $this->modularAPI->Database->real_escape_string($accessKey->PublicKey);
             $State = (int)$accessKey->State;
             $Usage = $this->modularAPI->Database->real_escape_string(serialize($accessKey->Usage->toArray()));
             $Permissions = $this->modularAPI->Database->real_escape_string(serialize($accessKey->Permissions->toArray()));
@@ -48,7 +49,7 @@
             $Signatures = $this->modularAPI->Database->real_escape_string(serialize($accessKey->Signatures->toArray()));
             $CreationDate = (int)$accessKey->CreationDate;
 
-            $Query = "INSERT INTO `access_keys` (public_id, state, usage_data, permissions, analytics, signatures, creation_date) VALUES ('$PublicID', $State, '$Usage', '$Permissions', '$Analytics', '$Signatures', $CreationDate)";
+            $Query = "INSERT INTO `access_keys` (public_id, public_key, state, usage_data, permissions, analytics, signatures, creation_date) VALUES ('$PublicID', '$PublicKey', $State, '$Usage', '$Permissions', '$Analytics', '$Signatures', $CreationDate)";
             $QueryResults = $this->modularAPI->Database->query($Query);
 
             if($QueryResults == true)
@@ -93,7 +94,7 @@
                     throw new UnsupportedSearchMethodException();
             }
 
-            $Query = "SELECT id, public_id, state, usage_data, permissions, analytics, signatures, creation_date FROM `access_keys` WHERE $searchMethod=$input";
+            $Query = "SELECT id, public_id, public_key, state, usage_data, permissions, analytics, signatures, creation_date FROM `access_keys` WHERE $searchMethod=$input";
             $QueryResults = $this->modularAPI->Database->query($Query);
 
             if($QueryResults == false)
@@ -138,6 +139,7 @@
 
             $ID = (int)$accessKey->ID;
             $PublicID = $this->modularAPI->Database->real_escape_string($accessKey->PublicID);
+            $PublicKey = $this->modularAPI->Database->real_escape_string($accessKey->PublicKey);
             $State = (int)$accessKey->State;
             $Usage = $this->modularAPI->Database->real_escape_string(serialize($accessKey->Usage->toArray()));
             $Permissions = $this->modularAPI->Database->real_escape_string(serialize($accessKey->Permissions->toArray()));
@@ -145,7 +147,7 @@
             $Signatures = $this->modularAPI->Database->real_escape_string(serialize($accessKey->Signatures->toArray()));
             $CreationDate = (int)$accessKey->CreationDate;
 
-            $Query = "UPDATE `access_keys` SET public_id='$PublicID', state=$State, usage_data='$Usage', permissions='$Permissions', analytics='$Analytics', signatures='$Signatures', creation_date=$CreationDate WHERE id=$ID";
+            $Query = "UPDATE `access_keys` SET public_id='$PublicID', public_key='$PublicKey', state=$State, usage_data='$Usage', permissions='$Permissions', analytics='$Analytics', signatures='$Signatures', creation_date=$CreationDate WHERE id=$ID";
             $QueryResults = $this->modularAPI->Database->query($Query);
 
             if($QueryResults == true)

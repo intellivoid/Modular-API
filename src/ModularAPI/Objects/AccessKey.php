@@ -88,7 +88,8 @@
         {
             return array(
                 'id' => $this->ID,
-                'public_id' => $this->PublicKey,
+                'public_id' => $this->PublicID,
+                'public_key' => $this->PublicKey,
                 'state' => $this->State,
                 'usage' => $this->Usage->toArray(),
                 'permissions' => $this->Permissions->toArray(),
@@ -116,6 +117,11 @@
             if(isset($data['public_id']))
             {
                 $AccessKeyObject->PublicID = (string)$data['public_id'];
+            }
+
+            if(isset($data['public_key']))
+            {
+                $AccessKeyObject->PublicKey = (string)$data['public_key'];
             }
 
             if(isset($data['state']))

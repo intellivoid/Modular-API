@@ -28,45 +28,50 @@
       <Comment>The Public ID of the Access Key</Comment>
       <DataType>text|0</DataType>
     </column>
-    <column id="13" parent="10" name="state">
+    <column id="13" parent="10" name="public_key">
       <Position>3</Position>
+      <Comment>The Public Key for the Access Key, used for making requests</Comment>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="14" parent="10" name="state">
+      <Position>4</Position>
       <Comment>The state of the access key</Comment>
       <DataType>int(255)|0</DataType>
     </column>
-    <column id="14" parent="10" name="usage_data">
-      <Position>4</Position>
+    <column id="15" parent="10" name="usage_data">
+      <Position>5</Position>
       <Comment>Usage data which determines if the Access Key can still be used</Comment>
       <DataType>text|0</DataType>
     </column>
-    <column id="15" parent="10" name="permissions">
-      <Position>5</Position>
+    <column id="16" parent="10" name="permissions">
+      <Position>6</Position>
       <Comment>Permissions data which determines what modules that this access key has access to</Comment>
       <DataType>text|0</DataType>
     </column>
-    <column id="16" parent="10" name="analytics">
-      <Position>6</Position>
+    <column id="17" parent="10" name="analytics">
+      <Position>7</Position>
       <Comment>The Analytical data regarding the usage of this access key for this month and the past month</Comment>
       <DataType>text|0</DataType>
     </column>
-    <column id="17" parent="10" name="signatures">
-      <Position>7</Position>
+    <column id="18" parent="10" name="signatures">
+      <Position>8</Position>
       <Comment>Encryption Signatures for authentication purposes</Comment>
       <DataType>text|0</DataType>
     </column>
-    <column id="18" parent="10" name="creation_date">
-      <Position>8</Position>
+    <column id="19" parent="10" name="creation_date">
+      <Position>9</Position>
       <DataType>int(255)|0</DataType>
     </column>
-    <index id="19" parent="10" name="access_keys_id_uindex">
+    <index id="20" parent="10" name="access_keys_id_uindex">
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="20" parent="10" name="PRIMARY">
+    <key id="21" parent="10" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="21" parent="10" name="access_keys_id_uindex">
+    <key id="22" parent="10" name="access_keys_id_uindex">
       <ColNames>id</ColNames>
       <UnderlyingIndexName>access_keys_id_uindex</UnderlyingIndexName>
     </key>
