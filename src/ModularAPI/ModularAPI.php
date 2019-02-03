@@ -6,8 +6,10 @@
 
     define('MODULAR_API', __DIR__ . DIRECTORY_SEPARATOR);
 
+    include_once(MODULAR_API . 'Abstracts' . DIRECTORY_SEPARATOR . 'HTTP' . DIRECTORY_SEPARATOR . 'ResponseCode' . DIRECTORY_SEPARATOR . 'ClientError.php');
     include_once(MODULAR_API . 'Abstracts' . DIRECTORY_SEPARATOR . 'HTTP' . DIRECTORY_SEPARATOR . 'ResponseCode' . DIRECTORY_SEPARATOR . 'Information.php');
     include_once(MODULAR_API . 'Abstracts' . DIRECTORY_SEPARATOR . 'HTTP' . DIRECTORY_SEPARATOR . 'ResponseCode' . DIRECTORY_SEPARATOR . 'Redirect.php');
+    include_once(MODULAR_API . 'Abstracts' . DIRECTORY_SEPARATOR . 'HTTP' . DIRECTORY_SEPARATOR . 'ResponseCode' . DIRECTORY_SEPARATOR . 'ServerError.php');
     include_once(MODULAR_API . 'Abstracts' . DIRECTORY_SEPARATOR . 'HTTP' . DIRECTORY_SEPARATOR . 'ResponseCode' . DIRECTORY_SEPARATOR . 'Successful.php');
     include_once(MODULAR_API . 'Abstracts' . DIRECTORY_SEPARATOR . 'HTTP' . DIRECTORY_SEPARATOR . 'ContentType.php');
     include_once(MODULAR_API . 'Abstracts' . DIRECTORY_SEPARATOR . 'HTTP' . DIRECTORY_SEPARATOR . 'FileType.php');
