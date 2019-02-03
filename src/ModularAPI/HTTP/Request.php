@@ -1,8 +1,10 @@
 <?php
 
     namespace ModularAPI\HTTP;
+    use ModularAPI\Abstracts\AuthenticationType;
     use ModularAPI\Exceptions\InvalidRequestQueryException;
     use ModularAPI\Exceptions\UnsupportedClientException;
+    use ModularAPI\Objects\RequestAuthentication;
     use ModularAPI\Objects\RequestQuery;
     use ModularAPI\Utilities\Checker;
 
@@ -39,6 +41,80 @@
             }
 
             throw new InvalidRequestQueryException();
+        }
+
+        /**
+         * Parses the Authentication Method used
+         *
+         * @return RequestAuthentication
+         * @throws UnsupportedClientException
+         */
+        public static function parseAuthentication(): RequestAuthentication
+        {
+            if(Checker::isWebRequest() == false)
+            {
+                throw new UnsupportedClientException();
+            }
+
+            $RequestAuthentication = new RequestAuthentication();
+
+            if(isset($_GET['api_key']))
+            {
+                $RequestAuthentication->Type = AuthenticationType::APIKey;
+                $RequestAuthentication->Key = $_GET['api_key'];
+                $RequestAuthentication->Certificate = null;
+                return $RequestAuthentication;
+            }
+
+            if(isset($_POST['api_key']))
+            {
+                $RequestAuthentication->Type = AuthenticationType::APIKey;
+                $RequestAuthentication->Key = $_POST['api_key'];
+                $RequestAuthentication->Certificate = null;
+                return $RequestAuthentication;
+            }
+
+            if(isset($_GET['certificate']))
+            {
+                if(Checker::isBase64($_GET['certificate']) == false)
+                {
+                    $RequestAuthentication->Type = AuthenticationType::Certificate;
+                    $RequestAuthentication->Certificate = 'INVALID';
+                    $RequestAuthentication->Key = null;
+
+                    return $RequestAuthentication;
+                }
+
+                $RequestAuthentication->Type = AuthenticationType::Certificate;
+                $RequestAuthentication->Certificate = base64_decode($_GET['certificate'], true);
+                $RequestAuthentication->Key = null;
+
+                return $RequestAuthentication;
+            }
+
+            if(isset($_POST['certificate']))
+            {
+                if(Checker::isBase64($_POST['certificate']) == false)
+                {
+                    $RequestAuthentication->Type = AuthenticationType::Certificate;
+                    $RequestAuthentication->Certificate = 'INVALID';
+                    $RequestAuthentication->Key = null;
+
+                    return $RequestAuthentication;
+                }
+
+                $RequestAuthentication->Type = AuthenticationType::Certificate;
+                $RequestAuthentication->Certificate = base64_decode($_POST['certificate'], true);
+                $RequestAuthentication->Key = null;
+
+                return $RequestAuthentication;
+            }
+
+            $RequestAuthentication->Type = AuthenticationType::None;
+            $RequestAuthentication->Certificate = null;
+            $RequestAuthentication->Key = null;
+
+            return $RequestAuthentication;
         }
 
         /**

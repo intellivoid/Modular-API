@@ -22,4 +22,15 @@
 
             return false;
         }
+
+        /**
+         * Determines if the data is base64 valid
+         *
+         * @param $data
+         * @return bool
+         */
+        public static function isBase64($data): bool
+        {
+            return (bool) preg_match('/^[a-zA-Z0-9\/\r\n+]*={0,2}$/', $s);
+        }
     }

@@ -16,6 +16,7 @@
     include_once(MODULAR_API . 'Abstracts' . DIRECTORY_SEPARATOR . 'HTTP' . DIRECTORY_SEPARATOR . 'RequestMethod.php');
     include_once(MODULAR_API . 'Abstracts' . DIRECTORY_SEPARATOR . 'AccessKeySearchMethod.php');
     include_once(MODULAR_API . 'Abstracts' . DIRECTORY_SEPARATOR . 'AccessKeyStatus.php');
+    include_once(MODULAR_API . 'Abstracts' . DIRECTORY_SEPARATOR . 'AuthenticationType.php');
     include_once(MODULAR_API . 'Abstracts' . DIRECTORY_SEPARATOR . 'ExceptionCodes.php');
     include_once(MODULAR_API . 'Abstracts' . DIRECTORY_SEPARATOR . 'UsageType.php');
     include_once(MODULAR_API . 'Configurations' . DIRECTORY_SEPARATOR . 'PermissionsConfiguration.php');
@@ -41,6 +42,7 @@
     include_once(MODULAR_API . 'Objects' . DIRECTORY_SEPARATOR . 'AccessKey' . DIRECTORY_SEPARATOR . 'Usage.php');
     include_once(MODULAR_API . 'Objects' . DIRECTORY_SEPARATOR . 'AccessKey.php');
     include_once(MODULAR_API . 'Objects' . DIRECTORY_SEPARATOR . 'HTTPResponse.php');
+    include_once(MODULAR_API . 'Objects' . DIRECTORY_SEPARATOR . 'RequestAuthentication.php');
     include_once(MODULAR_API . 'Objects' . DIRECTORY_SEPARATOR . 'RequestQuery.php');
     include_once(MODULAR_API . 'Utilities' . DIRECTORY_SEPARATOR . 'Builder.php');
     include_once(MODULAR_API . 'Utilities' . DIRECTORY_SEPARATOR . 'Checker.php');
