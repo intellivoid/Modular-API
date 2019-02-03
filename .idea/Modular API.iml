@@ -17,6 +17,10 @@
       <sourceFolder url="file://$MODULE_DIR$/src/ModularAPI/Utilities" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/ModularAPI/DatabaseManager" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/ModularAPI/Managers" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/ModularAPI/HTTP" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/ModularAPI/Abstracts/HTTP" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/ModularAPI/HTTP/ResponseCode" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/ModularAPI/Abstracts/HTTP/ResponseCode" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
