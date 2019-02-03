@@ -17,4 +17,5 @@
         const AccessKeyNotFoundException = 106;
         const InvalidAccessKeyStatusException = 107;
         const UnsupportedClientException = 108;
+        const InvalidRequestQueryException = 109;
     }

@@ -1,6 +1,11 @@
 <?php
 
     namespace ModularAPI\HTTP;
+    use ModularAPI\Abstracts\HTTP\ResponseCode\ClientError;
+    use ModularAPI\Abstracts\HTTP\ResponseCode\Information;
+    use ModularAPI\Abstracts\HTTP\ResponseCode\Redirect;
+    use ModularAPI\Abstracts\HTTP\ResponseCode\ServerError;
+    use ModularAPI\Abstracts\HTTP\ResponseCode\Successful;
     use ModularAPI\Exceptions\UnsupportedClientException;
     use ModularAPI\Utilities\Checker;
 
@@ -64,7 +69,7 @@
         /**
          * Sets the response code
          *
-         * @param int $responseCode
+         * @param int|ClientError|Information|Redirect|ServerError|Successful $responseCode
          * @return bool
          * @throws UnsupportedClientException
          */

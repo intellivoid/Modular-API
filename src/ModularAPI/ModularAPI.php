@@ -13,6 +13,7 @@
     include_once(MODULAR_API . 'Abstracts' . DIRECTORY_SEPARATOR . 'HTTP' . DIRECTORY_SEPARATOR . 'ResponseCode' . DIRECTORY_SEPARATOR . 'Successful.php');
     include_once(MODULAR_API . 'Abstracts' . DIRECTORY_SEPARATOR . 'HTTP' . DIRECTORY_SEPARATOR . 'ContentType.php');
     include_once(MODULAR_API . 'Abstracts' . DIRECTORY_SEPARATOR . 'HTTP' . DIRECTORY_SEPARATOR . 'FileType.php');
+    include_once(MODULAR_API . 'Abstracts' . DIRECTORY_SEPARATOR . 'HTTP' . DIRECTORY_SEPARATOR . 'RequestMethod.php');
     include_once(MODULAR_API . 'Abstracts' . DIRECTORY_SEPARATOR . 'AccessKeySearchMethod.php');
     include_once(MODULAR_API . 'Abstracts' . DIRECTORY_SEPARATOR . 'AccessKeyStatus.php');
     include_once(MODULAR_API . 'Abstracts' . DIRECTORY_SEPARATOR . 'ExceptionCodes.php');
@@ -25,11 +26,13 @@
     include_once(MODULAR_API . 'Exceptions' . DIRECTORY_SEPARATOR . 'DatabaseException.php');
     include_once(MODULAR_API . 'Exceptions' . DIRECTORY_SEPARATOR . 'DatabaseNotEstablishedException.php');
     include_once(MODULAR_API . 'Exceptions' . DIRECTORY_SEPARATOR . 'InvalidAccessKeyStatusException.php');
+    include_once(MODULAR_API . 'Exceptions' . DIRECTORY_SEPARATOR . 'InvalidRequestQueryException.php');
     include_once(MODULAR_API . 'Exceptions' . DIRECTORY_SEPARATOR . 'NoResultsFoundException.php');
     include_once(MODULAR_API . 'Exceptions' . DIRECTORY_SEPARATOR . 'UnsupportedClientException.php');
     include_once(MODULAR_API . 'Exceptions' . DIRECTORY_SEPARATOR . 'UnsupportedSearchMethodException.php');
     include_once(MODULAR_API . 'Exceptions' . DIRECTORY_SEPARATOR . 'UsageExceededException.php');
     include_once(MODULAR_API . 'HTTP' . DIRECTORY_SEPARATOR . 'Headers.php');
+    include_once(MODULAR_API . 'HTTP' . DIRECTORY_SEPARATOR . 'Request.php');
     include_once(MODULAR_API . 'HTTP' . DIRECTORY_SEPARATOR . 'Response.php');
     include_once(MODULAR_API . 'Managers' . DIRECTORY_SEPARATOR . 'AccessKeyManager.php');
     include_once(MODULAR_API . 'Objects' . DIRECTORY_SEPARATOR . 'AccessKey' . DIRECTORY_SEPARATOR . 'Analytics.php');
@@ -37,6 +40,8 @@
     include_once(MODULAR_API . 'Objects' . DIRECTORY_SEPARATOR . 'AccessKey' . DIRECTORY_SEPARATOR . 'Signatures.php');
     include_once(MODULAR_API . 'Objects' . DIRECTORY_SEPARATOR . 'AccessKey' . DIRECTORY_SEPARATOR . 'Usage.php');
     include_once(MODULAR_API . 'Objects' . DIRECTORY_SEPARATOR . 'AccessKey.php');
+    include_once(MODULAR_API . 'Objects' . DIRECTORY_SEPARATOR . 'HTTPResponse.php');
+    include_once(MODULAR_API . 'Objects' . DIRECTORY_SEPARATOR . 'RequestQuery.php');
     include_once(MODULAR_API . 'Utilities' . DIRECTORY_SEPARATOR . 'Builder.php');
     include_once(MODULAR_API . 'Utilities' . DIRECTORY_SEPARATOR . 'Checker.php');
     include_once(MODULAR_API . 'Utilities' . DIRECTORY_SEPARATOR . 'Hashing.php');
