@@ -28,4 +28,53 @@
          * @var string
          */
         public $Default;
+
+        /**
+         * Converts object to array
+         * 
+         * @return array
+         */
+        public function toArray(): array
+        {
+            return array(
+                strtoupper($this->Name) => array(
+                    'REQUIRED' => $this->Required,
+                    'DEFAULT' => $this->Default
+                )
+            );
+        }
+
+        /**
+         * Creates object from array
+         * 
+         * @param string $name
+         * @param array $data
+         * @return Paramerter
+         */
+        public static function fromArray(string $name, array $data): Paramerter
+        {
+            $ParamerterObject = new Paramerter();
+
+            $ParamerterObject->Name = $name;
+
+            if(isset($data['REQUIRED']))
+            {
+                $ParamerterObject->Required = (bool)$data['REQUIRED'];
+            }
+            else
+            {
+                $ParamerterObject->Required = true;
+            }
+            
+            if(isset($data['DEFAULT']))
+            {
+                $ParamerterObject->Default = (string)$data['DEFAULT'];
+            }
+            else
+            {
+                $ParamerterObject->Default = null;
+            }
+            
+            return $ParamerterObject;
+        }
     }

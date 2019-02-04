@@ -17,7 +17,7 @@
           "SCRIPT": "get_time",
           "PARAMETERS":
           {
-            "timezone": {"REQUIRED": false, "default": "example123"}
+            "timezone": {"REQUIRED": false, "DEFAULT": "example123"}
           }
         }
       }
