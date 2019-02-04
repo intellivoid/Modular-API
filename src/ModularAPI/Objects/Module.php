@@ -117,7 +117,7 @@
 
             if(isset($data['PARAMETERS']))
             {
-                $ModuleObject->Parameters = (string)$data['PARAMETERS'];
+                $ModuleObject->Parameters = $data['PARAMETERS'];
             }
             else
             {
