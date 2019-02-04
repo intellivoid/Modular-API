@@ -37,9 +37,93 @@
         public $GetMethodAllowed;
 
         /**
+         * The name of the script that gets executed for this module (without .php extension)
+         *
+         * @var string
+         */
+        public $ScriptName;
+
+        /**
          * List of expected parameters
          *
          * @var array
          */
         public $Parameters;
+
+        /**
+         * Converts the object to an array
+         *
+         * @return array
+         */
+        public function toArray(): array
+        {
+            return array(
+                'REQUIRE_AUTHENTICATION' => (bool)$this->RequireAuthentication,
+                'POST_METHOD_ALLOWED' => (bool)$this->PostMethodAllowed,
+                'GET_METHOD_ALLOWED' => (bool)$this->GetMethodAllowed,
+                'SCRIPT' => (string)$this->ScriptName,
+                'PARAMETERS' => $this->Parameters
+            );
+        }
+
+        /**
+         * Creates object from array
+         *
+         * @param string $name
+         * @param array $data
+         * @return Module
+         */
+        public static function fromArray(string $name, array $data): Module
+        {
+            $ModuleObject = new Module();
+
+            $ModuleObject->Name = $name;
+
+            if(isset($data['REQUIRE_AUTHENTICATION']))
+            {
+                $ModuleObject->RequireAuthentication = (bool)$data['REQUIRE_AUTHENTICATION'];
+            }
+            else
+            {
+                $ModuleObject->RequireAuthentication = false;
+            }
+
+            if(isset($data['POST_METHOD_ALLOWED']))
+            {
+                $ModuleObject->PostMethodAllowed = (bool)$data['POST_METHOD_ALLOWED'];
+            }
+            else
+            {
+                $ModuleObject->PostMethodAllowed = true;
+            }
+
+            if(isset($data['GET_METHOD_ALLOWED']))
+            {
+                $ModuleObject->GetMethodAllowed = (bool)$data['GET_METHOD_ALLOWED'];
+            }
+            else
+            {
+                $ModuleObject->GetMethodAllowed = true;
+            }
+
+            if(isset($data['SCRIPT']))
+            {
+                $ModuleObject->ScriptName = (string)$data['SCRIPT'];
+            }
+            else
+            {
+                $ModuleObject->ScriptName = null;
+            }
+
+            if(isset($data['PARAMETERS']))
+            {
+                $ModuleObject->Parameters = (string)$data['PARAMETERS'];
+            }
+            else
+            {
+                $ModuleObject->Parameters = array();
+            }
+
+            return $ModuleObject;
+        }
     }
