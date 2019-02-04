@@ -21,4 +21,5 @@
          * @var string
          */
         public $UnavailableMessage;
+
     }
