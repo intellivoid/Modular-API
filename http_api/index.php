@@ -70,5 +70,3 @@
         \ModularAPI\HTTP\Response::json($Payload, \ModularAPI\Abstracts\HTTP\ResponseCode\ClientError::_400);
         exit();
     }
-
-    $APIVersion = $APIConfiguration[strtolower($Query->Version)];

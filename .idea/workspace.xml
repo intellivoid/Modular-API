@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="602b3bfd-c56d-4d6c-98e1-090bbbd8bfc8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ModularAPI/Objects/Module.php" afterPath="$PROJECT_DIR$/src/ModularAPI/Objects/Module.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/http_api/index.php" afterPath="$PROJECT_DIR$/http_api/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ModularAPI/Objects/API.php" afterPath="$PROJECT_DIR$/src/ModularAPI/Objects/API.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -51,11 +52,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/http_api/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="73" column="65" lean-forward="false" selection-start-line="73" selection-start-column="65" selection-end-line="73" selection-end-column="65" />
+            <state relative-caret-position="425">
+              <caret line="71" column="5" lean-forward="false" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
               <folding>
                 <element signature="e#10#190#0#PHP" expanded="true" />
               </folding>
@@ -63,31 +64,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Paramerter.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ModularAPI/Objects/Paramerter.php">
+      <file leaf-file-name="configuration.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/http_api/configuration.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="44" column="9" lean-forward="true" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+            <state relative-caret-position="51">
+              <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Policies.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ModularAPI/Objects/Policies.php">
+      <file leaf-file-name="API.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ModularAPI/Objects/API.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="65" column="35" lean-forward="true" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
+            <state relative-caret-position="204">
+              <caret line="12" column="10" lean-forward="true" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Module.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Configuration.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ModularAPI/Objects/Configuration.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="371">
+              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Module.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ModularAPI/Objects/Module.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="79" column="40" lean-forward="true" selection-start-line="79" selection-start-column="40" selection-end-line="79" selection-end-column="40" />
+            <state relative-caret-position="507">
+              <caret line="85" column="16" lean-forward="true" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -148,16 +159,16 @@
         <option value="$PROJECT_DIR$/src/ModularAPI/Utilities/Checker.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/HTTP/Response.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/HTTP/Request.php" />
-        <option value="$PROJECT_DIR$/http_api/index.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/Objects/Policies.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/Objects/HTTPResponse.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/Objects/Request.php" />
-        <option value="$PROJECT_DIR$/src/ModularAPI/Objects/API.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/Objects/Configuration.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/ModularAPI.php" />
         <option value="$PROJECT_DIR$/http_api/configuration.json" />
         <option value="$PROJECT_DIR$/src/ModularAPI/Objects/Paramerter.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/Objects/Module.php" />
+        <option value="$PROJECT_DIR$/src/ModularAPI/Objects/API.php" />
+        <option value="$PROJECT_DIR$/http_api/index.php" />
       </list>
     </option>
   </component>
@@ -687,12 +698,12 @@
       <workItem from="1549123689178" duration="10919000" />
       <workItem from="1549142843548" duration="2781000" />
       <workItem from="1549147693980" duration="13543000" />
-      <workItem from="1549212408479" duration="21771000" />
+      <workItem from="1549212408479" duration="23742000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78740000" />
+    <option name="totallyTimeSpent" value="80711000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1103,52 +1114,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ModularAPI/Objects/API.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="8" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ModularAPI/Objects/Configuration.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ModularAPI/ModularAPI.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="388">
           <caret line="46" column="80" lean-forward="false" selection-start-line="46" selection-start-column="80" selection-end-line="46" selection-end-column="80" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/http_api/configuration.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/http_api/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="73" column="65" lean-forward="false" selection-start-line="73" selection-start-column="65" selection-end-line="73" selection-end-column="65" />
-          <folding>
-            <element signature="e#10#190#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ModularAPI/Objects/Paramerter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="44" column="9" lean-forward="true" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -1161,11 +1130,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModularAPI/Objects/Paramerter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModularAPI/Objects/Configuration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ModularAPI/Objects/Module.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="79" column="40" lean-forward="true" selection-start-line="79" selection-start-column="40" selection-end-line="79" selection-end-column="40" />
+        <state relative-caret-position="507">
+          <caret line="85" column="16" lean-forward="true" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="16" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModularAPI/Objects/API.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="10" lean-forward="true" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http_api/configuration.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http_api/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="71" column="5" lean-forward="false" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
+          <folding>
+            <element signature="e#10#190#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
