@@ -37,6 +37,7 @@
     }
 
     $Module = $Configuration->getModule($Query->Module);
+
     if($Module->RequireAuthentication == true)
     {
         if($AccessKey == null)
@@ -49,9 +50,12 @@
             }
         }
 
-        if($AccessKey->Permissions->hasPermission($Module->Name) == false)
+        if($AccessKey->Permissions->AllowAll == false)
         {
-            invalidPermissionError();
+            if($AccessKey->Permissions->hasPermission($Module->Name) == false)
+            {
+                invalidPermissionError();
+            }
         }
 
         if($Module->RequireUsage == true)
@@ -61,4 +65,33 @@
                 usageExceededError();
             }
         }
+    }
+
+    $SafeVersion = str_ireplace('/', '_', $Query->Version);
+    $SafeVersion = str_ireplace('\\', '_', $SafeVersion);
+    $ModuleFile = __DIR__ . DIRECTORY_SEPARATOR . 'modules' . DIRECTORY_SEPARATOR . $SafeVersion . DIRECTORY_SEPARATOR . $Module->ScriptName . '.php';
+
+    if(file_exists($ModuleFile) == false)
+    {
+        moduleScriptNotFoundError();
+    }
+
+    try
+    {
+        $Parameters = ModularAPI\HTTP\Request::getParameters($Module->Parameters);
+    }
+    catch(\ModularAPI\Exceptions\MissingParameterException $missingParameterException)
+    {
+        missingParamerter($missingParameterException->ParamerterName);
+    }
+
+    try
+    {
+        /** @noinspection PhpIncludeInspection */
+        include($ModuleFile);
+        Module($AccessKey, $Parameters);
+    }
+    catch(Exception $exception)
+    {
+        internalServerError($exception);
     }

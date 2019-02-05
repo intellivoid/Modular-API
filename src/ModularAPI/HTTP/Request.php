@@ -3,7 +3,9 @@
     namespace ModularAPI\HTTP;
     use ModularAPI\Abstracts\AuthenticationType;
     use ModularAPI\Exceptions\InvalidRequestQueryException;
+    use ModularAPI\Exceptions\MissingParameterException;
     use ModularAPI\Exceptions\UnsupportedClientException;
+    use ModularAPI\Objects\Paramerter;
     use ModularAPI\Objects\RequestAuthentication;
     use ModularAPI\Objects\RequestQuery;
     use ModularAPI\Utilities\Checker;
@@ -155,6 +157,7 @@
          *
          * @param array $expectedParameters
          * @return array
+         * @throws MissingParameterException
          * @throws UnsupportedClientException
          */
         public static function getParameters(array $expectedParameters): array
@@ -164,26 +167,54 @@
                 throw new UnsupportedClientException();
             }
 
-            $requestParameters = array();
-
-            if(isset($_GET))
+            if(count($expectedParameters) == 0)
             {
-                foreach($expectedParameters as $parameter)
-                {
-                    if(isset($_GET[$parameter]))
-                    {
-                        $requestParameters[$parameter] = $_GET[$parameter];
-                    }
-                }
+                return array();
             }
 
-            if(isset($_POST))
+            $requestParameters = array();
+
+            foreach($expectedParameters as $parameter_name => $parameter_properties)
             {
-                foreach($expectedParameters as $parameter)
+                $ParamerterObject = Paramerter::fromArray($parameter_name, $parameter_properties);
+
+                $ParamerterFound = false;
+
+                if(isset($_GET))
                 {
-                    if(isset($_POST[$parameter]))
+                    foreach($_GET as $getParamerter => $getValue)
                     {
-                        $requestParameters[$parameter] = $_POST[$parameter];
+                        if(strtoupper($getParamerter) == strtoupper($ParamerterObject->Name))
+                        {
+                            $requestParameters[$ParamerterObject->Name] = $getValue;
+                            $ParamerterFound = true;
+                            break;
+                        }
+                    }
+                }
+
+                if(isset($_POST))
+                {
+                    foreach($_POST as $postParamerter => $postValue)
+                    {
+                        if(strtoupper($postParamerter) == strtoupper($ParamerterObject->Name))
+                        {
+                            $requestParameters[$ParamerterObject->Name] = $postValue;
+                            $ParamerterFound = true;
+                            break;
+                        }
+                    }
+                }
+
+                if($ParamerterFound == false)
+                {
+                    if($ParamerterObject->Required == true)
+                    {
+                        throw new MissingParameterException($ParamerterObject->Name);
+                    }
+                    else
+                    {
+                        $requestParameters[$ParamerterObject->Name] = $ParamerterObject->Default;
                     }
                 }
             }

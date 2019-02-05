@@ -28,6 +28,7 @@
     include_once(MODULAR_API . 'Exceptions' . DIRECTORY_SEPARATOR . 'DatabaseNotEstablishedException.php');
     include_once(MODULAR_API . 'Exceptions' . DIRECTORY_SEPARATOR . 'InvalidAccessKeyStatusException.php');
     include_once(MODULAR_API . 'Exceptions' . DIRECTORY_SEPARATOR . 'InvalidRequestQueryException.php');
+    include_once(MODULAR_API . 'Exceptions' . DIRECTORY_SEPARATOR . 'MissingParameterException.php');
     include_once(MODULAR_API . 'Exceptions' . DIRECTORY_SEPARATOR . 'NoResultsFoundException.php');
     include_once(MODULAR_API . 'Exceptions' . DIRECTORY_SEPARATOR . 'UnsupportedClientException.php');
     include_once(MODULAR_API . 'Exceptions' . DIRECTORY_SEPARATOR . 'UnsupportedSearchMethodException.php');

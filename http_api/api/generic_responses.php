@@ -119,3 +119,38 @@
         \ModularAPI\HTTP\Response::json($Payload, \ModularAPI\Abstracts\HTTP\ResponseCode\ClientError::_429);
         exit();
     }
+
+    function moduleScriptNotFoundError()
+    {
+        $Payload = array(
+            'status' => false,
+            'code' => \ModularAPI\Abstracts\HTTP\ResponseCode\ServerError::_500,
+            'message' => 'The module was not found on the server'
+        );
+        \ModularAPI\HTTP\Response::json($Payload, \ModularAPI\Abstracts\HTTP\ResponseCode\ServerError::_500);
+        exit();
+    }
+
+    function missingParamerter(string $paramerter_name)
+    {
+        $Payload = array(
+            'status' => false,
+            'code' => \ModularAPI\Abstracts\HTTP\ResponseCode\ClientError::_400,
+            'message' => 'The paramerter "' . $paramerter_name . '" is missing'
+        );
+        \ModularAPI\HTTP\Response::json($Payload, \ModularAPI\Abstracts\HTTP\ResponseCode\ClientError::_400);
+        exit();
+    }
+
+
+    function internalServerError(Exception $exception)
+    {
+        $Payload = array(
+            'status' => false,
+            'code' => \ModularAPI\Abstracts\HTTP\ResponseCode\ServerError::_500,
+            'message' => 'Internal Server Error',
+            'refrence_code' => $exception->getCode()
+        );
+        \ModularAPI\HTTP\Response::json($Payload, \ModularAPI\Abstracts\HTTP\ResponseCode\ServerError::_500);
+        exit();
+    }
