@@ -79,6 +79,11 @@
                     $input = "'" . (string)$this->modularAPI->Database->real_escape_string($input) . "'";
                     break;
 
+                case AccessKeySearchMethod::byPublicKey:
+                    $searchMethod = (string)$this->modularAPI->Database->real_escape_string($searchMethod);
+                    $input = "'" . (string)$this->modularAPI->Database->real_escape_string($input) . "'";
+                    break;
+
                 case AccessKeySearchMethod::byID:
                     $searchMethod = (string)$this->modularAPI->Database->real_escape_string($searchMethod);
                     $input = (int)$input;

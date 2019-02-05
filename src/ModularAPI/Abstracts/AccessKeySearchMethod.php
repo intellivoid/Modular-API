@@ -19,6 +19,11 @@
         const byPublicID = 'public_id';
 
         /**
+         * Searches for Access Keys by Public Key
+         */
+        const byPublicKey = 'public_key';
+
+        /**
          * Searches for Access Keys by Certificate
          */
         const byCertificate = 'certificate';

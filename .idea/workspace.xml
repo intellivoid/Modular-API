@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="602b3bfd-c56d-4d6c-98e1-090bbbd8bfc8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/http_api/api/generic_responses.php" afterPath="$PROJECT_DIR$/http_api/api/generic_responses.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/http_api/configuration.json" afterPath="$PROJECT_DIR$/http_api/configuration.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/http_api/index.php" afterPath="$PROJECT_DIR$/http_api/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ModularAPI/Objects/Module.php" afterPath="$PROJECT_DIR$/src/ModularAPI/Objects/Module.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/http_api/api/authentication.php" afterPath="$PROJECT_DIR$/http_api/api/authentication.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ModularAPI/Abstracts/AccessKeySearchMethod.php" afterPath="$PROJECT_DIR$/src/ModularAPI/Abstracts/AccessKeySearchMethod.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ModularAPI/DatabaseManager/AccessKeys.php" afterPath="$PROJECT_DIR$/src/ModularAPI/DatabaseManager/AccessKeys.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ModularAPI/Managers/AccessKeyManager.php" afterPath="$PROJECT_DIR$/src/ModularAPI/Managers/AccessKeyManager.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -61,8 +61,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/http_api/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="60" column="37" lean-forward="false" selection-start-line="60" selection-start-column="37" selection-end-line="60" selection-end-column="37" />
+            <state relative-caret-position="646">
+              <caret line="43" column="34" lean-forward="true" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
               <folding>
                 <element signature="e#10#190#0#PHP" expanded="true" />
               </folding>
@@ -70,72 +70,73 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="api.access_keys" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/82259bc3/fbda4cb6-17f1-4045-b152-24c81f42eb92/api.access_keys">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/fbda4cb6-17f1-4045-b152-24c81f42eb92/console.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="205" lean-forward="false" selection-start-line="0" selection-start-column="205" selection-end-line="0" selection-end-column="205" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="authentication.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/http_api/api/authentication.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-326">
-              <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+            <state relative-caret-position="246">
+              <caret line="44" column="58" lean-forward="true" selection-start-line="44" selection-start-column="58" selection-end-line="44" selection-end-column="58" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="configuration.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/http_api/configuration.json">
+      <file leaf-file-name="AccessKeyManager.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ModularAPI/Managers/AccessKeyManager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+            <state relative-caret-position="213">
+              <caret line="143" column="37" lean-forward="true" selection-start-line="143" selection-start-column="37" selection-end-line="143" selection-end-column="37" />
+              <folding>
+                <element signature="e#47#94#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccessKeySearchMethod.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ModularAPI/Abstracts/AccessKeySearchMethod.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="107">
+              <caret line="21" column="49" lean-forward="false" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="generic_responses.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/http_api/api/generic_responses.php">
+      <file leaf-file-name="AccessKeys.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ModularAPI/DatabaseManager/AccessKeys.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="986">
-              <caret line="61" column="70" lean-forward="false" selection-start-line="61" selection-start-column="70" selection-end-line="61" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ServerError.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ModularAPI/Abstracts/HTTP/ResponseCode/ServerError.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1207">
-              <caret line="71" column="62" lean-forward="true" selection-start-line="71" selection-start-column="62" selection-end-line="71" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Information.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ModularAPI/Abstracts/HTTP/ResponseCode/Information.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="27" column="34" lean-forward="false" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClientError.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ModularAPI/Abstracts/HTTP/ResponseCode/ClientError.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="217" column="23" lean-forward="false" selection-start-line="217" selection-start-column="15" selection-end-line="217" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Module.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ModularAPI/Objects/Module.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="96" column="13" lean-forward="true" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="78">
+              <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="106" selection-end-column="88" />
+              <folding>
+                <marker date="1549408682809" expanded="true" signature="1960:2192" ph="INSERT INTO `access_keys`... " />
+                <marker date="1549408682809" expanded="true" signature="4297:4439" ph="SELECT id, p... access_keys" />
+                <marker date="1549408682809" expanded="true" signature="6644:6867" ph="UPDATE `acce... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -148,8 +149,8 @@
       <find>create</find>
       <find>Unava</find>
       <find>ex</find>
-      <find>too many</find>
       <find>unavai</find>
+      <find>too many</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -158,11 +159,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/ModularAPI/Abstracts/InvalidAccessKeyState.php" />
-        <option value="$PROJECT_DIR$/src/ModularAPI/Exceptions/InvalidAccessKeyStatusException.php" />
-        <option value="$PROJECT_DIR$/tests/register_access_key.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/Objects/AccessKey.php" />
-        <option value="$PROJECT_DIR$/src/ModularAPI/DatabaseManager/AccessKeys.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/Utilities/Hashing.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/Objects/AccessKey/Permissions.php" />
         <option value="$PROJECT_DIR$/tables/access_keys.sql" />
@@ -197,7 +194,6 @@
         <option value="$PROJECT_DIR$/src/ModularAPI/Utilities/Checker.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/HTTP/Request.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/ModularAPI.php" />
-        <option value="$PROJECT_DIR$/src/ModularAPI/Managers/AccessKeyManager.php" />
         <option value="$PROJECT_DIR$/http_api/api_functions/generic_responses.php" />
         <option value="$PROJECT_DIR$/http_api/api_functions/authentication.php" />
         <option value="$PROJECT_DIR$/http_api/api_functions/request.php" />
@@ -209,6 +205,11 @@
         <option value="$PROJECT_DIR$/http_api/index.php" />
         <option value="$PROJECT_DIR$/http_api/configuration.json" />
         <option value="$PROJECT_DIR$/http_api/api/generic_responses.php" />
+        <option value="$PROJECT_DIR$/http_api/api/authentication.php" />
+        <option value="$PROJECT_DIR$/src/ModularAPI/Abstracts/AccessKeySearchMethod.php" />
+        <option value="$PROJECT_DIR$/src/ModularAPI/Managers/AccessKeyManager.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/fbda4cb6-17f1-4045-b152-24c81f42eb92/console.sql" />
+        <option value="$PROJECT_DIR$/src/ModularAPI/DatabaseManager/AccessKeys.php" />
       </list>
     </option>
   </component>
@@ -576,12 +577,12 @@
       <workItem from="1549212408479" duration="23898000" />
       <workItem from="1549304623412" duration="3999000" />
       <workItem from="1549331670506" duration="329000" />
-      <workItem from="1549393338845" duration="10847000" />
+      <workItem from="1549393338845" duration="11110000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96042000" />
+    <option name="totallyTimeSpent" value="96305000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -596,10 +597,11 @@
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20196672" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21860817" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21860817" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8067227" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.204236" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -610,7 +612,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -653,20 +654,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/time_signature.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="85" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="2" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/register_access_key.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ModularAPI/Utilities/Hashing.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
@@ -845,41 +832,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/82259bc3/fbda4cb6-17f1-4045-b152-24c81f42eb92/api.access_keys">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ModularAPI/DatabaseManager/AccessKeys.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="72" column="24" lean-forward="false" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="24" />
-          <folding>
-            <marker date="1549161204897" expanded="true" signature="1960:2192" ph="INSERT INTO `access_keys`... " />
-            <marker date="1549161204897" expanded="true" signature="3998:4140" ph="SELECT id, p... access_keys" />
-            <marker date="1549161204897" expanded="true" signature="6345:6568" ph="UPDATE `acce... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ModularAPI/Managers/AccessKeyManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="143" column="84" lean-forward="false" selection-start-line="143" selection-start-column="84" selection-end-line="143" selection-end-column="84" />
-          <folding>
-            <element signature="e#47#94#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ModularAPI/ModularAPI.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -995,28 +947,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/http_api/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="60" column="37" lean-forward="false" selection-start-line="60" selection-start-column="37" selection-end-line="60" selection-end-column="37" />
-          <folding>
-            <element signature="e#10#190#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/http_api/configuration.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/http_api/api/authentication.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-326">
-          <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1026,6 +960,75 @@
         <state relative-caret-position="986">
           <caret line="61" column="70" lean-forward="false" selection-start-line="61" selection-start-column="70" selection-end-line="61" selection-end-column="70" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/82259bc3/fbda4cb6-17f1-4045-b152-24c81f42eb92/api.access_keys">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http_api/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="43" column="34" lean-forward="true" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+          <folding>
+            <element signature="e#10#190#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/fbda4cb6-17f1-4045-b152-24c81f42eb92/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="205" lean-forward="false" selection-start-line="0" selection-start-column="205" selection-end-line="0" selection-end-column="205" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http_api/api/authentication.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="44" column="58" lean-forward="true" selection-start-line="44" selection-start-column="58" selection-end-line="44" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModularAPI/Abstracts/AccessKeySearchMethod.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="21" column="49" lean-forward="false" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModularAPI/Managers/AccessKeyManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="143" column="37" lean-forward="true" selection-start-line="143" selection-start-column="37" selection-end-line="143" selection-end-column="37" />
+          <folding>
+            <element signature="e#47#94#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModularAPI/DatabaseManager/AccessKeys.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="106" selection-end-column="88" />
+          <folding>
+            <marker date="1549408682809" expanded="true" signature="1960:2192" ph="INSERT INTO `access_keys`... " />
+            <marker date="1549408682809" expanded="true" signature="4297:4439" ph="SELECT id, p... access_keys" />
+            <marker date="1549408682809" expanded="true" signature="6644:6867" ph="UPDATE `acce... " />
+          </folding>
         </state>
       </provider>
     </entry>

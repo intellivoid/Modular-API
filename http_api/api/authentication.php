@@ -42,7 +42,7 @@
         {
             try
             {
-                return $modularAPI->AccessKeys()->verifyCertificate($Authentication->Certificate);
+                return $modularAPI->AccessKeys()->verifyAPIKey($Authentication->Key);
             }
             catch(Exception $exception)
             {

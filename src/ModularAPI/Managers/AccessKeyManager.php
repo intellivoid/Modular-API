@@ -141,6 +141,6 @@
          */
         public function verifyAPIKey(string $api_key): AccessKey
         {
-            return $this->Manager->get(AccessKeySearchMethod::byPublicID, $api_key);
+            return $this->Manager->get(AccessKeySearchMethod::byPublicKey, $api_key);
         }
     }
