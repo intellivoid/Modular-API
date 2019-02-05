@@ -75,3 +75,25 @@
         \ModularAPI\HTTP\Response::json($Payload, \ModularAPI\Abstracts\HTTP\ResponseCode\ClientError::_401);
         exit();
     }
+
+    function invalidPermissionError()
+    {
+        $Payload = array(
+            'status' => false,
+            'code' => \ModularAPI\Abstracts\HTTP\ResponseCode\ClientError::_403,
+            'message' => 'You don\'t have the required permissions to use this API Module'
+        );
+        \ModularAPI\HTTP\Response::json($Payload, \ModularAPI\Abstracts\HTTP\ResponseCode\ClientError::_403);
+        exit();
+    }
+
+    function unavailableError(string $Message)
+    {
+        $Payload = array(
+            'status' => false,
+            'code' => \ModularAPI\Abstracts\HTTP\ResponseCode\ServerError::_503,
+            'message' => $Message
+        );
+        \ModularAPI\HTTP\Response::json($Payload, \ModularAPI\Abstracts\HTTP\ResponseCode\ServerError::_503);
+        exit();
+    }

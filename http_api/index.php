@@ -10,20 +10,35 @@
     include_once(__DIR__ . DIRECTORY_SEPARATOR . 'api' . DIRECTORY_SEPARATOR . 'generic_responses.php');
     include_once(__DIR__ . DIRECTORY_SEPARATOR . 'api' . DIRECTORY_SEPARATOR . 'request.php');
 
-    $API = verifyRequest();
-    $AccessKey = null;
+    $Configuration = verifyRequest();
 
+    if($Configuration->API->Available == false)
+    {
+        unavailableError($Configuration->API->UnavailableMessage);
+    }
+
+    $AccessKey = null;
     $ModularAPI = new \ModularAPI\ModularAPI();
 
-    if($API->Policies->AuthenticatedRequired == true)
+    if($Configuration->Policies->AuthenticatedRequired == true)
     {
-        $AccessKey = verifyAuthentication($ModularAPI, $API->Policies->ForceCertificate);
+        $AccessKey = verifyAuthentication($ModularAPI, $Configuration->Policies->ForceCertificate);
     }
 
     $Query = \ModularAPI\HTTP\Request::parseQuery($_GET['path']);
-    if($API->moduleExists($Query->Module) == false)
+    if($Configuration->moduleExists($Query->Module) == false)
     {
         invalidModuleError();
     }
 
-    $Module = $
+    $Module = $Configuration->getModule($Query->Module);
+    if($Module->RequireAuthentication == true)
+    {
+        $AccessKey = verifyAuthentication($ModularAPI, false);
+
+
+        if($AccessKey->Permissions->hasPermission($Module) == false)
+        {
+            invalidPermissionError();
+        }
+    }

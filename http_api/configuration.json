@@ -12,6 +12,7 @@
       {
         "GetTime": {
           "REQUIRE_AUTHENTICATION": false,
+          "REQUIRE_USAGE": false,
           "POST_METHOD_ALLOWED": true,
           "GET_METHOD_ALLOWED": true,
           "SCRIPT": "get_time",
