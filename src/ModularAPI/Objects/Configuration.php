@@ -38,6 +38,25 @@
         public $Modules;
 
         /**
+         * Determines if the module exists
+         *
+         * @param string $module
+         * @return bool
+         */
+        public function moduleExists(string $module): bool
+        {
+            foreach($this->Modules as $module_name => $module_data)
+            {
+                if(strtoupper($module_name) == strtoupper($module))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        /**
          * Converts object to array
          *
          * @return array

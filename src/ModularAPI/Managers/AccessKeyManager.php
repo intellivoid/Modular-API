@@ -2,6 +2,7 @@
 
     namespace ModularAPI\Managers;
 
+    use ModularAPI\Abstracts\AccessKeySearchMethod;
     use ModularAPI\Abstracts\AccessKeyStatus;
     use ModularAPI\DatabaseManager\AccessKeys;
     use ModularAPI\Exceptions\InvalidAccessKeyStatusException;
@@ -119,5 +120,27 @@
             $AccessKeyObject->CreationDate = time();
 
             return $this->Manager->register($AccessKeyObject);
+        }
+
+        /**
+         * Verifies the certificate and returns the AccessKey Object
+         *
+         * @param string $certificate
+         * @return AccessKey
+         */
+        public function verifyCertificate(string $certificate): AccessKey
+        {
+            return $this->Manager->get(AccessKeySearchMethod::byCertificate, $certificate);
+        }
+
+        /**
+         * Verifies the access key and returns the AccessKey Object
+         *
+         * @param string $api_key
+         * @return AccessKey
+         */
+        public function verifyAPIKey(string $api_key): AccessKey
+        {
+            return $this->Manager->get(AccessKeySearchMethod::byPublicID, $api_key);
         }
     }

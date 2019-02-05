@@ -76,12 +76,9 @@
          * Constructs ModularAPI Library
          *
          * ModularAPI constructor.
-         * @param string|null $API_Configuration
          * @param bool $EstablishDatabaseConnection
-         * @internal param string $ConfigurationFile
-         * @internal param string $Modules
          */
-        public function __construct(string $API_Configuration = null, bool $EstablishDatabaseConnection = true)
+        public function __construct(bool $EstablishDatabaseConnection = true)
         {
             $Configuration = self::getConfiguration();
 
