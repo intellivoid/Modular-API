@@ -57,6 +57,25 @@
         }
 
         /**
+         * Loads module data
+         *
+         * @param string $module
+         * @return Module
+         */
+        public function getModule(string $module): Module
+        {
+            foreach($this->Modules as $module_name => $module_data)
+            {
+                if(strtoupper($module_name) == strtoupper($module))
+                {
+                    return Module::fromArray($module_name, $module_data);
+                }
+            }
+
+            return null;
+        }
+
+        /**
          * Converts object to array
          *
          * @return array
