@@ -71,4 +71,5 @@
         exit();
     }
 
-    $API = \ModularAPI\Objects\Configuration::
+    $API = \ModularAPI\Objects\Configuration::fromArray($APIConfiguration[strtolower($Query->Version)], $Query->Version);
+    $Authentication = ModularAPI\HTTP\Request::parseAuthentication();

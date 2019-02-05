@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="602b3bfd-c56d-4d6c-98e1-090bbbd8bfc8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/http_api/.htaccess" afterPath="$PROJECT_DIR$/http_api/.htaccess" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/http_api/index.php" afterPath="$PROJECT_DIR$/http_api/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ModularAPI/Objects/Configuration.php" afterPath="$PROJECT_DIR$/src/ModularAPI/Objects/Configuration.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ModularAPI/HTTP/Request.php" afterPath="$PROJECT_DIR$/src/ModularAPI/HTTP/Request.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ModularAPI/Utilities/Checker.php" afterPath="$PROJECT_DIR$/src/ModularAPI/Utilities/Checker.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -56,11 +58,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/http_api/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="73" column="46" lean-forward="false" selection-start-line="73" selection-start-column="46" selection-end-line="73" selection-end-column="46" />
+            <state relative-caret-position="425">
+              <caret line="74" column="69" lean-forward="false" selection-start-line="74" selection-start-column="69" selection-end-line="74" selection-end-column="69" />
               <folding>
                 <element signature="e#10#190#0#PHP" expanded="true" />
               </folding>
@@ -68,11 +70,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Configuration.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Request.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ModularAPI/HTTP/Request.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="206">
+              <caret line="96" column="55" lean-forward="true" selection-start-line="96" selection-start-column="55" selection-end-line="96" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Checker.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ModularAPI/Utilities/Checker.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="33" column="75" lean-forward="false" selection-start-line="33" selection-start-column="75" selection-end-line="33" selection-end-column="75" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".htaccess" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/http_api/.htaccess">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="40" lean-forward="false" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Configuration.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ModularAPI/Objects/Configuration.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="54" column="36" lean-forward="false" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
+            <state relative-caret-position="289">
+              <caret line="17" column="11" lean-forward="true" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -102,7 +134,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/ModularAPI/Exceptions/DatabaseException.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/Abstracts/AccessKeySearchMethod.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/Exceptions/UnsupportedSearchMethodException.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/Exceptions/NoResultsFoundException.php" />
@@ -140,9 +171,7 @@
         <option value="$PROJECT_DIR$/src/ModularAPI/HTTP/Headers.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/Objects/RequestAuthentication.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/Abstracts/AuthenticationType.php" />
-        <option value="$PROJECT_DIR$/src/ModularAPI/Utilities/Checker.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/HTTP/Response.php" />
-        <option value="$PROJECT_DIR$/src/ModularAPI/HTTP/Request.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/Objects/Policies.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/Objects/HTTPResponse.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/Objects/Request.php" />
@@ -151,8 +180,11 @@
         <option value="$PROJECT_DIR$/src/ModularAPI/Objects/Paramerter.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/Objects/Module.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/Objects/API.php" />
-        <option value="$PROJECT_DIR$/http_api/index.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/Objects/Configuration.php" />
+        <option value="$PROJECT_DIR$/http_api/.htaccess" />
+        <option value="$PROJECT_DIR$/src/ModularAPI/Utilities/Checker.php" />
+        <option value="$PROJECT_DIR$/src/ModularAPI/HTTP/Request.php" />
+        <option value="$PROJECT_DIR$/http_api/index.php" />
       </list>
     </option>
   </component>
@@ -238,6 +270,20 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Modular API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modular-api" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="http_api" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -249,11 +295,11 @@
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Netkas\Documents\gits\modular-api\http_api\v1" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Netkas\Documents\gits\modular-api\web_api" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Netkas\Documents\gits\modular-api\http_api\v1" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -385,12 +431,12 @@
       <workItem from="1549212408479" duration="23898000" />
       <workItem from="1549304623412" duration="3999000" />
       <workItem from="1549331670506" duration="329000" />
-      <workItem from="1549393338845" duration="381000" />
+      <workItem from="1549393338845" duration="1428000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85576000" />
+    <option name="totallyTimeSpent" value="86623000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -482,13 +528,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ModularAPI/Configurations/PermissionsConfiguration.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="30" column="58" lean-forward="false" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ModularAPI/Utilities/Builder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -682,13 +721,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ModularAPI/Utilities/Checker.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="49" lean-forward="false" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ModularAPI/Abstracts/AuthenticationType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -707,13 +739,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ModularAPI/HTTP/Request.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="23" column="11" lean-forward="true" selection-start-line="23" selection-start-column="11" selection-end-line="109" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -775,16 +800,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/http_api/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="73" column="46" lean-forward="false" selection-start-line="73" selection-start-column="46" selection-end-line="73" selection-end-column="46" />
-          <folding>
-            <element signature="e#10#190#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/http_api/configuration.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -795,9 +810,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ModularAPI/Objects/Configuration.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="54" column="36" lean-forward="false" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
+        <state relative-caret-position="289">
+          <caret line="17" column="11" lean-forward="true" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http_api/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="40" lean-forward="false" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModularAPI/HTTP/Request.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="96" column="55" lean-forward="true" selection-start-line="96" selection-start-column="55" selection-end-line="96" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModularAPI/Utilities/Checker.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="33" column="75" lean-forward="false" selection-start-line="33" selection-start-column="75" selection-end-line="33" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http_api/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="74" column="69" lean-forward="false" selection-start-line="74" selection-start-column="69" selection-end-line="74" selection-end-column="69" />
+          <folding>
+            <element signature="e#10#190#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -88,9 +88,22 @@
                     return $RequestAuthentication;
                 }
 
-                $RequestAuthentication->Type = AuthenticationType::Certificate;
-                $RequestAuthentication->Certificate = base64_decode($_GET['certificate'], true);
-                $RequestAuthentication->Key = null;
+                $CertificateData = base64_decode($_GET['certificate'], true);
+
+                if($CertificateData !== false)
+                {
+                    $RequestAuthentication->Type = AuthenticationType::Certificate;
+                    $RequestAuthentication->Certificate = $CertificateData;
+                    $RequestAuthentication->Key = null;
+                }
+                else
+                {
+                    $RequestAuthentication->Type = AuthenticationType::Certificate;
+                    $RequestAuthentication->Certificate = 'INVALID';
+                    $RequestAuthentication->Key = null;
+
+                    return $RequestAuthentication;
+                }
 
                 return $RequestAuthentication;
             }
@@ -98,6 +111,23 @@
             if(isset($_POST['certificate']))
             {
                 if(Checker::isBase64($_POST['certificate']) == false)
+                {
+                    $RequestAuthentication->Type = AuthenticationType::Certificate;
+                    $RequestAuthentication->Certificate = 'INVALID';
+                    $RequestAuthentication->Key = null;
+
+                    return $RequestAuthentication;
+                }
+
+                $CertificateData = base64_decode($_POST['certificate'], true);
+
+                if($CertificateData !== false)
+                {
+                    $RequestAuthentication->Type = AuthenticationType::Certificate;
+                    $RequestAuthentication->Certificate = $CertificateData;
+                    $RequestAuthentication->Key = null;
+                }
+                else
                 {
                     $RequestAuthentication->Type = AuthenticationType::Certificate;
                     $RequestAuthentication->Certificate = 'INVALID';
