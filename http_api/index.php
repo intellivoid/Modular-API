@@ -23,6 +23,11 @@
     if($Configuration->Policies->AuthenticatedRequired == true)
     {
         $AccessKey = verifyAuthentication($ModularAPI, $Configuration->Policies->ForceCertificate);
+
+        if($AccessKey->Usage->expired() == true)
+        {
+            keyExpiredError();
+        }
     }
 
     $Query = \ModularAPI\HTTP\Request::parseQuery($_GET['path']);
@@ -34,11 +39,26 @@
     $Module = $Configuration->getModule($Query->Module);
     if($Module->RequireAuthentication == true)
     {
-        $AccessKey = verifyAuthentication($ModularAPI, false);
+        if($AccessKey == null)
+        {
+            $AccessKey = verifyAuthentication($ModularAPI, false);
 
+            if($AccessKey->Usage->expired() == true)
+            {
+                keyExpiredError();
+            }
+        }
 
         if($AccessKey->Permissions->hasPermission($Module) == false)
         {
             invalidPermissionError();
+        }
+
+        if($Module->RequireUsage == true)
+        {
+            if($AccessKey->Usage->usageExceeded() == true)
+            {
+                usageExceededError();
+            }
         }
     }

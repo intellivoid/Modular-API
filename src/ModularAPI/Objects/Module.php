@@ -23,6 +23,13 @@
         public $RequireAuthentication;
 
         /**
+         * Indicates if this module requires usage resources
+         *
+         * @var bool
+         */
+        public $RequireUsage;
+
+        /**
          * Indicates if the POST Method is allowed within the request
          *
          * @var bool
@@ -59,6 +66,7 @@
         {
             return array(
                 'REQUIRE_AUTHENTICATION' => (bool)$this->RequireAuthentication,
+                'REQUIRE_USAGE' => (bool)$this->RequireUsage,
                 'POST_METHOD_ALLOWED' => (bool)$this->PostMethodAllowed,
                 'GET_METHOD_ALLOWED' => (bool)$this->GetMethodAllowed,
                 'SCRIPT' => (string)$this->ScriptName,
@@ -86,6 +94,15 @@
             else
             {
                 $ModuleObject->RequireAuthentication = false;
+            }
+
+            if(isset($data['REQUIRE_USAGE']))
+            {
+                $ModuleObject->RequireUsage = (bool)$data['REQUIRE_USAGE'];
+            }
+            else
+            {
+                $ModuleObject->RequireUsage = false;
             }
 
             if(isset($data['POST_METHOD_ALLOWED']))

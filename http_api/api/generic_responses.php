@@ -48,7 +48,7 @@
         $Payload = array(
             'status' => false,
             'code' => \ModularAPI\Abstracts\HTTP\ResponseCode\ClientError::_401,
-            'message' => 'Authentication is required for this API, Please consult the documentation'
+            'message' => 'Authentication is required'
         );
         \ModularAPI\HTTP\Response::json($Payload, \ModularAPI\Abstracts\HTTP\ResponseCode\ClientError::_401);
         exit();
@@ -59,7 +59,7 @@
         $Payload = array(
             'status' => false,
             'code' => \ModularAPI\Abstracts\HTTP\ResponseCode\ClientError::_401,
-            'message' => 'A Certificate is required for authentication, please consult the documentation'
+            'message' => 'A Certificate is required for authentication'
         );
         \ModularAPI\HTTP\Response::json($Payload, \ModularAPI\Abstracts\HTTP\ResponseCode\ClientError::_401);
         exit();
@@ -95,5 +95,27 @@
             'message' => $Message
         );
         \ModularAPI\HTTP\Response::json($Payload, \ModularAPI\Abstracts\HTTP\ResponseCode\ServerError::_503);
+        exit();
+    }
+
+    function keyExpiredError()
+    {
+        $Payload = array(
+            'status' => false,
+            'code' => \ModularAPI\Abstracts\HTTP\ResponseCode\ClientError::_403,
+            'message' => 'The Key/Certificate has expired'
+        );
+        \ModularAPI\HTTP\Response::json($Payload, \ModularAPI\Abstracts\HTTP\ResponseCode\ClientError::_403);
+        exit();
+    }
+
+    function usageExceededError()
+    {
+        $Payload = array(
+            'status' => false,
+            'code' => \ModularAPI\Abstracts\HTTP\ResponseCode\ClientError::_429,
+            'message' => 'Usage limit has exceeded'
+        );
+        \ModularAPI\HTTP\Response::json($Payload, \ModularAPI\Abstracts\HTTP\ResponseCode\ClientError::_429);
         exit();
     }
