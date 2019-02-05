@@ -49,7 +49,7 @@
             }
         }
 
-        if($AccessKey->Permissions->hasPermission($Module) == false)
+        if($AccessKey->Permissions->hasPermission($Module->Name) == false)
         {
             invalidPermissionError();
         }
