@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="602b3bfd-c56d-4d6c-98e1-090bbbd8bfc8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tables/requests.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/fbda4cb6-17f1-4045-b152-24c81f42eb92.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/fbda4cb6-17f1-4045-b152-24c81f42eb92.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="602b3bfd-c56d-4d6c-98e1-090bbbd8bfc8" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -128,8 +124,8 @@
       <file leaf-file-name="requests.sql" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tables/requests.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="87" lean-forward="false" selection-start-line="11" selection-start-column="87" selection-end-line="11" selection-end-column="87" />
+            <state relative-caret-position="153">
+              <caret line="9" column="52" lean-forward="false" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -684,12 +680,12 @@
       <workItem from="1549393338845" duration="17756000" />
       <workItem from="1549424402026" duration="166000" />
       <workItem from="1549464820459" duration="5766000" />
-      <workItem from="1549475422691" duration="3684000" />
+      <workItem from="1549475422691" duration="3761000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112567000" />
+    <option name="totallyTimeSpent" value="112644000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1140,8 +1136,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tables/requests.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="87" lean-forward="false" selection-start-line="11" selection-start-column="87" selection-end-line="11" selection-end-column="87" />
+        <state relative-caret-position="153">
+          <caret line="9" column="52" lean-forward="false" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
           <folding />
         </state>
       </provider>

@@ -7,7 +7,7 @@ CREATE TABLE api.requests
     version TEXT COMMENT 'The version of the API that was used',
     module TEXT COMMENT 'The Module of the API that was used for this request',
     request_method TEXT COMMENT 'The request method that was used',
-    request_paramerters TEXT COMMENT 'The paramerters that was used (JSON Encoded)',
+    request_paramerters TEXT COMMENT 'The parameters that was used (JSON Encoded)',
     response_type TEXT COMMENT 'The response type given from the server',
     response_length INT(255) COMMENT 'The content length of the response from the server (Bytes)',
     response_code INT(255) COMMENT 'The HTTP Response code given by the server',

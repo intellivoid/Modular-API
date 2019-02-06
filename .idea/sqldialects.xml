@@ -3,5 +3,6 @@
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/src/ModularAPI/DatabaseManager/AccessKeys.php" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/tables/access_keys.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/tables/requests.sql" dialect="MySQL" />
   </component>
 </project>
