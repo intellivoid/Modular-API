@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="602b3bfd-c56d-4d6c-98e1-090bbbd8bfc8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ModularAPI/Objects/RequestRecord.php" afterPath="$PROJECT_DIR$/src/ModularAPI/Objects/RequestRecord.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tables/requests.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/fbda4cb6-17f1-4045-b152-24c81f42eb92.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/fbda4cb6-17f1-4045-b152-24c81f42eb92.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,7 +45,21 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
       <PATH_ELEMENT>
-        <option name="myItemId" value="access_keys" />
+        <option name="myItemId" value="requests" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="api@127.0.0.1" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="api" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
@@ -64,10 +80,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RequestRecord.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RequestRecord.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ModularAPI/Objects/RequestRecord.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
+            <state relative-caret-position="269">
               <caret line="137" column="66" lean-forward="false" selection-start-line="137" selection-start-column="66" selection-end-line="137" selection-end-column="66" />
               <folding>
                 <element signature="e#3351#3553#0#PHP" expanded="false" />
@@ -90,6 +106,31 @@
                 <element signature="e#5678#5992#0#PHP" expanded="false" />
                 <element signature="e#5870#5992#0#PHP" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="api.requests" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/82259bc3/fbda4cb6-17f1-4045-b152-24c81f42eb92/api.requests">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="requests.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tables/requests.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="87" lean-forward="false" selection-start-line="11" selection-start-column="87" selection-end-line="11" selection-end-column="87" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -145,7 +186,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/ModularAPI/Abstracts/HTTPContentType.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/Abstracts/HTTP/ContentType.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/HTTP/ResponseContent.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/Abstracts/HTTP/FileType.php" />
@@ -196,6 +236,7 @@
         <option value="$PROJECT_DIR$/src/ModularAPI/Objects/RequestLog.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/ModularAPI.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/Objects/RequestRecord.php" />
+        <option value="$PROJECT_DIR$/tables/requests.sql" />
       </list>
     </option>
   </component>
@@ -643,12 +684,12 @@
       <workItem from="1549393338845" duration="17756000" />
       <workItem from="1549424402026" duration="166000" />
       <workItem from="1549464820459" duration="5766000" />
-      <workItem from="1549475422691" duration="3091000" />
+      <workItem from="1549475422691" duration="3684000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111974000" />
+    <option name="totallyTimeSpent" value="112567000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -666,7 +707,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20801815" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21860817" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21860817" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8067227" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20726173" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -733,14 +774,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ModularAPI/HTTP/ResponseCode/Information.php" />
-    <entry file="file://$PROJECT_DIR$/src/ModularAPI/Abstracts/HTTP/ResponseCode/Redirect.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="78" column="30" lean-forward="true" selection-start-line="78" selection-start-column="30" selection-end-line="78" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ModularAPI/Abstracts/HTTP/ResponseCode/Successful.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -893,6 +926,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="143" column="37" lean-forward="true" selection-start-line="143" selection-start-column="37" selection-end-line="143" selection-end-column="37" />
+          <folding>
+            <element signature="e#47#94#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1063,7 +1099,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ModularAPI/Objects/RequestRecord.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
+        <state relative-caret-position="269">
           <caret line="137" column="66" lean-forward="false" selection-start-line="137" selection-start-column="66" selection-end-line="137" selection-end-column="66" />
           <folding>
             <element signature="e#3351#3553#0#PHP" expanded="false" />
@@ -1086,6 +1122,27 @@
             <element signature="e#5678#5992#0#PHP" expanded="false" />
             <element signature="e#5870#5992#0#PHP" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/82259bc3/fbda4cb6-17f1-4045-b152-24c81f42eb92/api.requests">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tables/requests.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="87" lean-forward="false" selection-start-line="11" selection-start-column="87" selection-end-line="11" selection-end-column="87" />
+          <folding />
         </state>
       </provider>
     </entry>
