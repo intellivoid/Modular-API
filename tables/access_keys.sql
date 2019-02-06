@@ -10,5 +10,5 @@ CREATE TABLE access_keys
     signatures TEXT COMMENT 'Encryption Signatures for authentication purposes',
     creation_date INT(255) COMMENT 'The Unix Timestamp that this Access Key was created in'
 );
-CREATE UNIQUE INDEX access_keys_id_uindex ON api.access_keys (id);
-ALTER TABLE api.access_keys COMMENT = 'The table of available access keys to use with the API';
+CREATE UNIQUE INDEX access_keys_id_uindex ON access_keys (id);
+ALTER TABLE access_keys COMMENT = 'The table of available access keys to use with the API';

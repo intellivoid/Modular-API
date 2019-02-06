@@ -1,4 +1,4 @@
-CREATE TABLE api.requests
+CREATE TABLE requests
 (
     id INT(255) PRIMARY KEY COMMENT 'The ID of the Request' AUTO_INCREMENT,
     refrence_id TEXT COMMENT 'The public Refrence ID for the Request',
@@ -16,5 +16,5 @@ CREATE TABLE api.requests
     fatal_error BOOL COMMENT 'Indicates if this request ended in a fatal exception which was handled by the server',
     exception_details TEXT COMMENT 'The details of the exception if there was a fatal error'
 );
-CREATE UNIQUE INDEX requests_id_uindex ON api.requests (id);
-ALTER TABLE api.requests COMMENT = 'History of all valid requests that were made to the API';
+CREATE UNIQUE INDEX requests_id_uindex ON requests (id);
+ALTER TABLE requests COMMENT = 'History of all valid requests that were made to the API';
