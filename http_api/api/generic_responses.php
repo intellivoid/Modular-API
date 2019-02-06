@@ -154,3 +154,14 @@
         \ModularAPI\HTTP\Response::json($Payload, \ModularAPI\Abstracts\HTTP\ResponseCode\ServerError::_500);
         exit();
     }
+
+    function requestMethodNotAllowed(string $requestMethod)
+    {
+        $Payload = array(
+            'status' => false,
+            'code' => \ModularAPI\Abstracts\HTTP\ResponseCode\ClientError::_405,
+            'message' => 'The request method "' . $requestMethod . '" is not allowed'
+        );
+        \ModularAPI\HTTP\Response::json($Payload, \ModularAPI\Abstracts\HTTP\ResponseCode\ClientError::_405);
+        exit();
+    }

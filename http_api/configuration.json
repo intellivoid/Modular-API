@@ -14,7 +14,7 @@
           "REQUIRE_AUTHENTICATION": true,
           "REQUIRE_USAGE": true,
           "POST_METHOD_ALLOWED": true,
-          "GET_METHOD_ALLOWED": true,
+          "GET_METHOD_ALLOWED": false,
           "SCRIPT": "get_time",
           "PARAMETERS":
           {

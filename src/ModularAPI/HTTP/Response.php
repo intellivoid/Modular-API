@@ -32,7 +32,7 @@
 
             try
             {
-                if($responseCode !== 'NONE')
+                if(strtoupper($refrenceCode) !== 'NONE')
                 {
                     $data['ref_code'] = $refrenceCode;
                 }

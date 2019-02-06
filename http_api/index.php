@@ -38,6 +38,26 @@
 
     $Module = $Configuration->getModule($Query->Module);
 
+    if($Query->RequestMethod == \ModularAPI\Abstracts\HTTP\RequestMethod::GET)
+    {
+        if($Module->GetMethodAllowed == false)
+        {
+            requestMethodNotAllowed($Query->RequestMethod);
+        }
+    }
+    elseif($Query->RequestMethod == \ModularAPI\Abstracts\HTTP\RequestMethod::POST)
+    {
+        if($Module->PostMethodAllowed == false)
+        {
+            requestMethodNotAllowed($Query->RequestMethod);
+        }
+    }
+    else
+    {
+        // Any other request method which isn't supported isn't allowed
+        requestMethodNotAllowed($Query->RequestMethod);
+    }
+
     if($Module->RequireAuthentication == true)
     {
         if($AccessKey == null)
