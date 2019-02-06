@@ -30,7 +30,7 @@
         }
     }
 
-    $Query = \ModularAPI\HTTP\Request::parseQuery($_GET['path']);
+    $Query = \ModularAPI\HTTP\Request::parseQuery();
     if($Configuration->moduleExists($Query->Module) == false)
     {
         invalidModuleError();

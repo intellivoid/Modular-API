@@ -19,33 +19,47 @@
         /**
          * Parses the request query
          *
-         * @param string $Query
          * @return RequestQuery
          * @throws InvalidRequestQueryException
          * @throws UnsupportedClientException
          */
-        public static function parseQuery(string $Query): RequestQuery
+        public static function parseQuery(): RequestQuery
         {
             if(Checker::isWebRequest() == false)
             {
                 throw new UnsupportedClientException();
             }
 
-            $QueryParts = explode('/', $Query);
-            if(count($QueryParts) == 2)
+            if(isset($_GET['version']) == false)
             {
-                if(strlen($QueryParts[1]) > 0)
+                throw new InvalidRequestQueryException();
+            }
+            else
+            {
+                if(strlen($_GET['version']) == 0)
                 {
-                    $RequestQuery = new RequestQuery();
-                    $RequestQuery->Version = $QueryParts[0];
-                    $RequestQuery->Module = $QueryParts[1];
-                    $RequestQuery->RequestMethod = strtoupper($_SERVER['REQUEST_METHOD']);
-
-                    return $RequestQuery;
+                    throw new InvalidRequestQueryException();
                 }
             }
 
-            throw new InvalidRequestQueryException();
+            if(isset($_GET['module']) == false)
+            {
+                throw new InvalidRequestQueryException();
+            }
+            else
+            {
+                if(strlen($_GET['module']) == 0)
+                {
+                    throw new InvalidRequestQueryException();
+                }
+            }
+
+            $RequestQuery = new RequestQuery();
+            $RequestQuery->Version = $_GET['version'];
+            $RequestQuery->Module = $_GET['module'];
+            $RequestQuery->RequestMethod = strtoupper($_SERVER['REQUEST_METHOD']);
+
+            return $RequestQuery;
         }
 
         /**

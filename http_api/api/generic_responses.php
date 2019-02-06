@@ -3,10 +3,10 @@
     {
         $Payload = array(
             'status' => false,
-            'code' => \ModularAPI\Abstracts\HTTP\ResponseCode\ClientError::_400,
+            'code' => \ModularAPI\Abstracts\HTTP\ResponseCode\ClientError::_404,
             'message' => 'The requested resource is invalid/unavailable'
         );
-        \ModularAPI\HTTP\Response::json($Payload, \ModularAPI\Abstracts\HTTP\ResponseCode\ClientError::_400);
+        \ModularAPI\HTTP\Response::json($Payload, \ModularAPI\Abstracts\HTTP\ResponseCode\ClientError::_404);
         exit();
     }
 
@@ -14,10 +14,10 @@
     {
         $Payload = array(
             'status' => false,
-            'code' => \ModularAPI\Abstracts\HTTP\ResponseCode\ClientError::_400,
-            'message' => 'The API Module is invalid'
+            'code' => \ModularAPI\Abstracts\HTTP\ResponseCode\ClientError::_404,
+            'message' => 'The requested resource/module is invalid or unavailable'
         );
-        \ModularAPI\HTTP\Response::json($Payload, \ModularAPI\Abstracts\HTTP\ResponseCode\ClientError::_400);
+        \ModularAPI\HTTP\Response::json($Payload, \ModularAPI\Abstracts\HTTP\ResponseCode\ClientError::_404);
         exit();
     }
 

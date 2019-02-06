@@ -1,16 +1,11 @@
 <?php
     function verifyRequest(): \ModularAPI\Objects\Configuration
     {
-        if(isset($_GET['path']) == false)
-        {
-            invalidResourceError();
-        }
-
         $Query = null;
 
         try
         {
-            $Query = \ModularAPI\HTTP\Request::parseQuery($_GET['path']);
+            $Query = \ModularAPI\HTTP\Request::parseQuery();
         }
         catch(Exception $exception)
         {
