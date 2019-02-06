@@ -100,6 +100,20 @@
         public $ExceptionDetails;
 
         /**
+         * The authentication method used
+         *
+         * @var string
+         */
+        public $AuthenticationMethod;
+
+        /**
+         * The Public ID of the Access Key/Certificate that was used if any
+         *
+         * @var string|null
+         */
+        public $AccessKeyPublicID;
+
+        /**
          * Converts object to array
          *
          * @return array
@@ -119,7 +133,9 @@
                 'response_length' => $this->ResponseLength,
                 'response_code' => $this->ResponseCode,
                 'fatal_error' => $this->FatalError,
-                'exception_details' => $this->ExceptionDetails->toArray()
+                'exception_details' => $this->ExceptionDetails->toArray(),
+                'authentication_method' => $this->AuthenticationMethod,
+                'access_key_public_id' => $this->AccessKeyPublicID
             );
         }
 
@@ -214,6 +230,24 @@
             else
             {
                 $RequestRecordObject->ExceptionDetails = ExceptionDetails::fromArray([]);
+            }
+
+            if(isset($data['authentication_method']))
+            {
+                $RequestRecordObject->AuthenticationMethod = (string)$data['authentication_method'];
+            }
+            else
+            {
+                $RequestRecordObject->AuthenticationMethod = 'UNKNOWN';
+            }
+
+            if(isset($data['access_key_public_id']))
+            {
+                $RequestRecordObject->AccessKeyPublicID = (string)$data['access_key_public_id'];
+            }
+            else
+            {
+                $RequestRecordObject->AccessKeyPublicID = null;
             }
 
             return $RequestRecordObject;
