@@ -22,6 +22,7 @@
     include_once(MODULAR_API . 'Configurations' . DIRECTORY_SEPARATOR . 'PermissionsConfiguration.php');
     include_once(MODULAR_API . 'Configurations' . DIRECTORY_SEPARATOR . 'UsageConfiguration.php');
     include_once(MODULAR_API . 'DatabaseManager' . DIRECTORY_SEPARATOR . 'AccessKeys.php');
+    include_once(MODULAR_API . 'DatabaseManager' . DIRECTORY_SEPARATOR . 'Requests.php');
     include_once(MODULAR_API . 'Exceptions' . DIRECTORY_SEPARATOR . 'AccessKeyExpiredException.php');
     include_once(MODULAR_API . 'Exceptions' . DIRECTORY_SEPARATOR . 'AccessKeyNotFoundException.php');
     include_once(MODULAR_API . 'Exceptions' . DIRECTORY_SEPARATOR . 'DatabaseException.php');
