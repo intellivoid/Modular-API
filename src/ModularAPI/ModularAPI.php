@@ -2,6 +2,7 @@
 
     namespace ModularAPI;
 
+    use ModularAPI\DatabaseManager\Requests;
     use ModularAPI\Managers\AccessKeyManager;
 
     define('MODULAR_API', __DIR__ . DIRECTORY_SEPARATOR);
@@ -52,6 +53,7 @@
     include_once(MODULAR_API . 'Objects' . DIRECTORY_SEPARATOR . 'RequestAuthentication.php');
     include_once(MODULAR_API . 'Objects' . DIRECTORY_SEPARATOR . 'RequestQuery.php');
     include_once(MODULAR_API . 'Objects' . DIRECTORY_SEPARATOR . 'RequestRecord.php');
+    include_once(MODULAR_API . 'Objects' . DIRECTORY_SEPARATOR . 'Response.php');
     include_once(MODULAR_API . 'Utilities' . DIRECTORY_SEPARATOR . 'Builder.php');
     include_once(MODULAR_API . 'Utilities' . DIRECTORY_SEPARATOR . 'Checker.php');
     include_once(MODULAR_API . 'Utilities' . DIRECTORY_SEPARATOR . 'Hashing.php');
@@ -75,6 +77,11 @@
          * @var AccessKeyManager
          */
         private $AccessKeyManager;
+
+        /**
+         * @var DatabaseManager\Requests
+         */
+        private $RequestsLog;
 
         /**
          * Constructs ModularAPI Library
@@ -102,7 +109,7 @@
             }
 
             $this->AccessKeyManager = new AccessKeyManager($this);
-
+            $this->RequestsLog = new DatabaseManager\Requests($this);
         }
 
         /**
@@ -113,6 +120,16 @@
         public function AccessKeys(): AccessKeyManager
         {
             return $this->AccessKeyManager;
+        }
+
+        /**
+         * Manages Request Logs
+         *
+         * @return Requests
+         */
+        public function RequestsLog(): Requests
+        {
+            return $this->RequestsLog;
         }
 
         /**

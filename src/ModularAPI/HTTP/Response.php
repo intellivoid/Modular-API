@@ -19,12 +19,12 @@
          *
          * @param array $data
          * @param int $responseCode
+         * @param string $refrenceCode
          * @return bool
          * @throws UnsupportedClientException
          */
-        public static function json(array $data, int $responseCode): bool
+        public static function json(array $data, int $responseCode, string $refrenceCode = 'NONE'): bool
         {
-            // TODO: Complete this method
             if(Checker::isWebRequest() == false)
             {
                 throw new UnsupportedClientException();
@@ -32,6 +32,10 @@
 
             try
             {
+                if($responseCode !== 'NONE')
+                {
+                    $data['ref_code'] = $refrenceCode;
+                }
                 $Response = json_encode($data, JSON_PRETTY_PRINT);
                 Headers::setContentType(ContentType::application, FileType::json);
                 Headers::setResponseCode($responseCode);
@@ -49,10 +53,36 @@
                 $Response = json_encode($Payload, JSON_PRETTY_PRINT);
                 Headers::setContentType(ContentType::application, FileType::json);
                 Headers::setResponseCode(ServerError::_500);
-                Headers::setContentLength(strlen($Response));
+                Headers::setContentLength($Response);
                 print($Response);
             }
 
             return false;
+        }
+
+        /**
+         * Returns a generic response
+         *
+         * @param $data
+         * @param string $contentType
+         * @param int $responseCode
+         * @return bool
+         * @throws UnsupportedClientException
+         * @internal param string $fileType
+         */
+        public static function other($data, string $contentType, int $responseCode): bool
+        {
+            if(Checker::isWebRequest() == false)
+            {
+                throw new UnsupportedClientException();
+            }
+
+            Headers::i_setContentType($contentType);
+            Headers::setResponseCode($responseCode);
+            Headers::setContentLength($data);
+
+            print($data);
+
+            return true;
         }
     }

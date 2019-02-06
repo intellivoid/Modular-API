@@ -138,4 +138,18 @@
             return hash('tiger128,3', $timeSignature . $privateSignature);
         }
 
+        /**
+         * Calculates the refrence ID
+         *
+         * @param int $timestamp
+         * @param string $version
+         * @param string $module
+         * @param string $ip
+         * @return string
+         */
+        public static function calculateRefrenceID(int $timestamp, string $version, string $module, string $ip)
+        {
+            return hash('sha256',  self::pepper($timestamp) . self::pepper($version) . self::pepper($module) . $ip);
+        }
+
     }

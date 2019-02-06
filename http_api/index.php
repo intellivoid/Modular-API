@@ -76,18 +76,55 @@
         moduleScriptNotFoundError();
     }
 
+    $ExecutionStart = microtime(true);
+    $ExecutionEnd = null;
+    $Response = null;
+    $FatalError = false;
+    $ExceptionDetails = null;
+    $Parameters = [];
+
     try
     {
         $Parameters = ModularAPI\HTTP\Request::getParameters($Module->Parameters);
         /** @noinspection PhpIncludeInspection */
         include($ModuleFile);
-        Module($AccessKey, $Parameters);
+        $Response = Module($AccessKey, $Parameters);
+        $ExecutionEnd = microtime(true);
     }
     catch(\ModularAPI\Exceptions\MissingParameterException $missingParameterException)
     {
+        $ExecutionEnd = microtime(true);
         missingParamerter($missingParameterException->ParamerterName);
     }
     catch(Exception $exception)
     {
-        internalServerError($exception);
+        $ExecutionEnd = microtime(true);
+        $Response = new \ModularAPI\Objects\Response();
+        $Response->ResponseCode = ModularAPI\Abstracts\HTTP\ResponseCode\ServerError::_500;
+        $Response->ResponseType = \ModularAPI\Abstracts\HTTP\ContentType::application . '/' . \ModularAPI\Abstracts\HTTP\FileType::json;
+        $Response->Content = array(
+            'status' => false,
+            'code' => \ModularAPI\Abstracts\HTTP\ResponseCode\ServerError::_500,
+            'message' => 'Internal Server Error',
+            'exception_code' => $exception->getCode()
+        );
+        $ExceptionDetails = new \ModularAPI\Objects\ExceptionDetails();
+        $ExceptionDetails->Line = $exception->getLine();
+        $ExceptionDetails->File = $exception->getFile();
+        $ExceptionDetails->Message = $exception->getMessage();
+        $ExceptionDetails->ExceptionCode = $exception->getCode();
     }
+
+    $ReferenceID = $ModularAPI->RequestsLog()->recordRequest(
+        getClientIP(),
+        ($ExecutionEnd - $ExecutionStart),
+        $Query,
+        $Parameters,
+        $Response,
+        ModularAPI\HTTP\Request::parseAuthentication(),
+        $AccessKey->PublicID,
+        $FatalError,
+        $ExceptionDetails
+    );
+
+    $Response->executeResponse($ReferenceID);

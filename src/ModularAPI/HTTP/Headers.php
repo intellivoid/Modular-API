@@ -35,6 +35,24 @@
         }
 
         /**
+         * Same as setContentType but without formatting
+         *
+         * @param string $content_type
+         * @return bool
+         * @throws UnsupportedClientException
+         */
+        public static function i_setContentType(string $content_type): bool
+        {
+            if(Checker::isWebRequest() == false)
+            {
+                throw new UnsupportedClientException();
+            }
+
+            header("Content-Type: $content_type");
+            return true;
+        }
+
+        /**
          * Sets Content-Length HTTP Header
          *
          * @param $data

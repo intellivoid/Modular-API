@@ -149,7 +149,7 @@
             'status' => false,
             'code' => \ModularAPI\Abstracts\HTTP\ResponseCode\ServerError::_500,
             'message' => 'Internal Server Error',
-            'refrence_code' => $exception->getCode()
+            'exception_code' => $exception->getCode()
         );
         \ModularAPI\HTTP\Response::json($Payload, \ModularAPI\Abstracts\HTTP\ResponseCode\ServerError::_500);
         exit();
