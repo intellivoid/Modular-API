@@ -79,17 +79,13 @@
     try
     {
         $Parameters = ModularAPI\HTTP\Request::getParameters($Module->Parameters);
+        /** @noinspection PhpIncludeInspection */
+        include($ModuleFile);
+        Module($AccessKey, $Parameters);
     }
     catch(\ModularAPI\Exceptions\MissingParameterException $missingParameterException)
     {
         missingParamerter($missingParameterException->ParamerterName);
-    }
-
-    try
-    {
-        /** @noinspection PhpIncludeInspection */
-        include($ModuleFile);
-        Module($AccessKey, $Parameters);
     }
     catch(Exception $exception)
     {
