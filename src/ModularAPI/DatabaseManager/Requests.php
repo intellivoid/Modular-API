@@ -77,7 +77,7 @@
                 $ExceptionDetails = $this->modularAPI->Database->real_escape_string(json_encode($exceptionDetails->toArray()));
             }
 
-            $Query = "INSERT INTO `requests` (refrence_id, execution_time, timestamp, client_ip, version, module, request_method, request_paramerters, response_type, response_code, authentication_method, access_key_public_id, fatal_error, exception_details) VALUES ('$RefrenceID', $ExecutionTime, $Timestamp, '$ClientIP', '$Version', '$Module', '$RequestMethod', '$RequestParameters', '$ResponseType', $ResponseCode, '$AuthenticationMethod', '$AccessKeyPublicID', $FatalError, '$ExceptionDetails')";
+            $Query = "INSERT INTO `requests` (refrence_id, execution_time, timestamp, client_ip, version, module, request_method, request_parameters, response_type, response_code, authentication_method, access_key_public_id, fatal_error, exception_details) VALUES ('$RefrenceID', $ExecutionTime, $Timestamp, '$ClientIP', '$Version', '$Module', '$RequestMethod', '$RequestParameters', '$ResponseType', $ResponseCode, '$AuthenticationMethod', '$AccessKeyPublicID', $FatalError, '$ExceptionDetails')";
             $QueryResults = $this->modularAPI->Database->query($Query);
 
             if($QueryResults == true)

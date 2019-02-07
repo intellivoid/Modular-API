@@ -120,7 +120,7 @@
       <Comment>The request method that was used</Comment>
       <DataType>text|0</DataType>
     </column>
-    <column id="32" parent="11" name="request_paramerters">
+    <column id="32" parent="11" name="request_parameters">
       <Position>9</Position>
       <Comment>The paramerters that was used (JSON Encoded)</Comment>
       <DataType>text|0</DataType>
