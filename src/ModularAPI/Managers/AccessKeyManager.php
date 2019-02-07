@@ -5,7 +5,9 @@
     use ModularAPI\Abstracts\AccessKeySearchMethod;
     use ModularAPI\Abstracts\AccessKeyStatus;
     use ModularAPI\DatabaseManager\AccessKeys;
+    use ModularAPI\Exceptions\AccessKeyExpiredException;
     use ModularAPI\Exceptions\InvalidAccessKeyStatusException;
+    use ModularAPI\Exceptions\UsageExceededException;
     use ModularAPI\ModularAPI;
     use ModularAPI\Objects\AccessKey;
     use ModularAPI\Utilities\Builder;
@@ -142,5 +144,23 @@
         public function verifyAPIKey(string $api_key): AccessKey
         {
             return $this->Manager->get(AccessKeySearchMethod::byPublicKey, $api_key);
+        }
+
+        /**
+         * Tracks the usage, throws an exception if usage limit exceeded or the access key has expired
+         *
+         * @param AccessKey $accessKey
+         * @param bool $trackExceeding
+         * @return bool
+         * @throws UsageExceededException
+         * @throws AccessKeyExpiredException
+         */
+        public function trackUsage(AccessKey $accessKey, bool $trackExceeding): bool
+        {
+            $accessKey->Usage->trackUsage($trackExceeding);
+            $accessKey->Analytics->trackUsage();
+            $this->Manager->update($accessKey);
+
+            return true;
         }
     }
