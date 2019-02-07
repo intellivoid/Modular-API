@@ -62,6 +62,14 @@
         }
 
         /**
+         * Revokes all permissions
+         */
+        public function revokeAllPermissions()
+        {
+            $this->Modules = [];
+        }
+
+        /**
          * Loads a configuration
          *
          * @param array $data
