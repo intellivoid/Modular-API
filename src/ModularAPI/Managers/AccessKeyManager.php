@@ -147,6 +147,17 @@
         }
 
         /**
+         * Gets the Access Key via Public ID
+         *
+         * @param string $public_id
+         * @return AccessKey
+         */
+        public function getAccessKey(string $public_id): AccessKey
+        {
+            return $this->Manager->get(AccessKeySearchMethod::byPublicID, $public_id);
+        }
+
+        /**
          * Tracks the usage, throws an exception if usage limit exceeded or the access key has expired
          *
          * @param AccessKey $accessKey
