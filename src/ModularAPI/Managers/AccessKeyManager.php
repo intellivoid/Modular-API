@@ -29,7 +29,7 @@
          *
          * @var AccessKeys
          */
-        private $Manager;
+        public $Manager;
 
         /**
          * AccessKeyManager constructor.
