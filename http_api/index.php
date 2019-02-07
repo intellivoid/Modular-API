@@ -87,6 +87,19 @@
         }
     }
 
+    try
+    {
+        $ModularAPI->AccessKeys()->trackUsage($AccessKey, $Module->RequireUsage);
+    }
+    catch(\ModularAPI\Exceptions\AccessKeyExpiredException $accessKeyExpiredException)
+    {
+        keyExpiredError();
+    }
+    catch(\ModularAPI\Exceptions\UsageExceededException $usageExceededException)
+    {
+        usageExceededError();
+    }
+
     $SafeVersion = str_ireplace('/', '_', $Query->Version);
     $SafeVersion = str_ireplace('\\', '_', $SafeVersion);
     $ModuleFile = __DIR__ . DIRECTORY_SEPARATOR . 'modules' . DIRECTORY_SEPARATOR . $SafeVersion . DIRECTORY_SEPARATOR . $Module->ScriptName . '.php';
