@@ -90,9 +90,9 @@
                     break;
 
                 case AccessKeySearchMethod::byCertificate:
-                    $PublicID = Hashing::calculatePublicID($input);
-                    $searchMethod = (string)$this->modularAPI->Database->real_escape_string($searchMethod);
-                    $input = "'" . (string)$this->modularAPI->Database->real_escape_string($PublicID) . "'";
+                    $PublicKey = Hashing::calculatePublicKey($input);
+                    $searchMethod = (string)$this->modularAPI->Database->real_escape_string(AccessKeySearchMethod::byPublicKey);
+                    $input = "'" . (string)$this->modularAPI->Database->real_escape_string($PublicKey) . "'";
                     break;
 
                 default:

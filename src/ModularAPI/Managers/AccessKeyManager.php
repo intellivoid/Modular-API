@@ -82,8 +82,8 @@
             );
 
             // Fill out the rest of the properties
-            $AccessKeyObject->PublicID = Hashing::calculatePublicID($AccessKeyObject->Signatures->createCertificate());
-            $AccessKeyObject->PublicKey = Hashing::calculatePublicKey(
+            $AccessKeyObject->PublicKey = Hashing::calculatePublicKey($AccessKeyObject->Signatures->createCertificate());
+            $AccessKeyObject->PublicID = Hashing::calculatePublicID(
                 $AccessKeyObject->Signatures->PrivateSignature,
                 $AccessKeyObject->Signatures->PublicSignature,
                 $AccessKeyObject->Signatures->TimeSignature
@@ -173,5 +173,32 @@
             $this->Manager->update($accessKey);
 
             return true;
+        }
+
+        /**
+         * Changes the access key's signatures to new signatures
+         *
+         * @param AccessKey $accessKey
+         */
+        public function changeSignatures(AccessKey $accessKey)
+        {
+            $CurrentTime = time();
+
+            $accessKey->Signatures->TimeSignature = Hashing::generateTimeSignature(
+                $CurrentTime,
+                $accessKey->Signatures->IssuerName
+            );
+            $accessKey->Signatures->PrivateSignature = Hashing::generatePrivateSignature(
+                $accessKey->Signatures->TimeSignature,
+                $accessKey->Signatures->IssuerName,
+                $CurrentTime
+            );
+            $accessKey->Signatures->PublicSignature = Hashing::generatePublicSignature(
+                $accessKey->Signatures->TimeSignature,
+                $accessKey->Signatures->PrivateSignature
+            );
+
+            $accessKey->PublicKey = $accessKey->Signatures->createCertificate();
+            $this->Manager->update($accessKey);
         }
     }

@@ -45,9 +45,7 @@
          */
         public function createCertificate(): string
         {
-            $CertificateData = 'api-' . $this-> PublicSignature . "\r\n";
-            $CertificateData .= Hashing::buildCertificateKey($this->IssuerName, $this->PrivateSignature, $this->PublicSignature);
-            return $CertificateData;
+            return Hashing::buildCertificateKey($this->IssuerName, $this->PrivateSignature, $this->PublicSignature);
         }
 
         /**

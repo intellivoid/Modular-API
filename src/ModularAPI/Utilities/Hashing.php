@@ -75,7 +75,7 @@
          * @param string $certificateKey
          * @return string
          */
-        public static function calculatePublicID(string $certificateKey): string
+        public static function calculatePublicKey(string $certificateKey): string
         {
             $fpKey = hash('crc32b', $certificateKey);
             $spKey = hash('crc32b', $fpKey);
@@ -90,9 +90,9 @@
          * @param string $timeSignature
          * @return string
          */
-        public static function calculatePublicKey(string $privateSignature, string $publicSignature, string $timeSignature): string
+        public static function calculatePublicID(string $privateSignature, string $publicSignature, string $timeSignature): string
         {
-            return hash('haval256,4', $privateSignature . hash('haval160,5', $publicSignature) . hash('sha256', $timeSignature));
+            return hash('haval256,4', self::pepper($privateSignature) . hash('haval160,5', self::pepper($publicSignature)) . hash('sha256', self::pepper($timeSignature)));
         }
 
         /**
