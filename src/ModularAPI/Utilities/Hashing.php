@@ -77,7 +77,7 @@
          */
         public static function calculatePublicKey(string $certificateKey): string
         {
-            $fpKey = hash('crc32b', $certificateKey);
+            $fpKey = hash('sha256', $certificateKey);
             $spKey = hash('crc32b', $fpKey);
             return $fpKey . $spKey;
         }
