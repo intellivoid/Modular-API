@@ -85,6 +85,11 @@
                 usageExceededError();
             }
         }
+
+        if($AccessKey->State == \ModularAPI\Abstracts\AccessKeyStatus::Suspended)
+        {
+            accessKeySuspended();
+        }
     }
 
     try

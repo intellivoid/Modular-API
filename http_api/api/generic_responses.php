@@ -165,3 +165,14 @@
         \ModularAPI\HTTP\Response::json($Payload, \ModularAPI\Abstracts\HTTP\ResponseCode\ClientError::_405);
         exit();
     }
+
+    function accessKeySuspended()
+    {
+        $Payload = array(
+            'status' => false,
+            'code' => \ModularAPI\Abstracts\HTTP\ResponseCode\ClientError::_403,
+            'message' => 'Your access key has been suspended'
+        );
+        \ModularAPI\HTTP\Response::json($Payload, \ModularAPI\Abstracts\HTTP\ResponseCode\ClientError::_403);
+        exit();
+    }
