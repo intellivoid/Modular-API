@@ -68,7 +68,7 @@
                 $this->CurrentMonthUsage = Builder::createMonthArray();
             }
 
-            $this->CurrentMonthUsage[(int)date('n') - 1] += 1;
+            $this->CurrentMonthUsage[(int)date('j') - 1] += 1;
         }
 
         /**
