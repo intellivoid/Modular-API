@@ -1,12 +1,25 @@
 <?php
-    function Module(\ModularAPI\Objects\AccessKey $accessKey, array $Parameters): \ModularAPI\Objects\Response
+    /** @noinspection PhpUnusedParameterInspection */
+
+    use ModularAPI\Abstracts\HTTP\ContentType;
+    use ModularAPI\Abstracts\HTTP\FileType;
+    use ModularAPI\Abstracts\HTTP\ResponseCode\Successful;
+    use ModularAPI\Objects\AccessKey;
+    use ModularAPI\Objects\Response;
+
+    /**
+     * @param AccessKey $accessKey
+     * @param array $Parameters
+     * @return Response
+     */
+    function Module(AccessKey $accessKey, array $Parameters): Response
     {
-        $Response = new \ModularAPI\Objects\Response();
-        $Response->ResponseCode = \ModularAPI\Abstracts\HTTP\ResponseCode\Successful::_200;
-        $Response->ResponseType = \ModularAPI\Abstracts\HTTP\ContentType::application . '/' . \ModularAPI\Abstracts\HTTP\FileType::json;
+        $Response = new Response();
+        $Response->ResponseCode = Successful::_200;
+        $Response->ResponseType = ContentType::application . '/' . FileType::json;
         $Response->Content = array(
             'status' => true,
-            'code' => \ModularAPI\Abstracts\HTTP\ResponseCode\Successful::_200,
+            'code' => Successful::_200,
             'payload' => time()
         );
 

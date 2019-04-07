@@ -1,11 +1,20 @@
 <?php
-    function verifyRequest(): \ModularAPI\Objects\Configuration
+
+    use ModularAPI\Exceptions\UnsupportedClientException;
+    use ModularAPI\HTTP\Request;
+    use ModularAPI\Objects\Configuration;
+
+    /**
+     * @return Configuration
+     * @throws UnsupportedClientException
+     */
+    function verifyRequest(): Configuration
     {
         $Query = null;
 
         try
         {
-            $Query = \ModularAPI\HTTP\Request::parseQuery();
+            $Query = Request::parseQuery();
         }
         catch(Exception $exception)
         {
@@ -32,9 +41,13 @@
             invalidVersionError();
         }
 
-        return \ModularAPI\Objects\Configuration::fromArray($APIConfiguration[strtolower($Query->Version)], $Query->Version);
+        /** @var array $APIConfiguration */
+        return Configuration::fromArray($APIConfiguration[strtolower($Query->Version)], $Query->Version);
     }
 
+    /**
+     * @return mixed
+     */
     function getClientIP()
     {
         if (!empty($_SERVER['HTTP_CLIENT_IP']))

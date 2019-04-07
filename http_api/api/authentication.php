@@ -1,9 +1,22 @@
 <?php
-    function verifyAuthentication(\ModularAPI\ModularAPI $modularAPI, bool $forceCertificate = false): \ModularAPI\Objects\AccessKey
-    {
-        $Authentication = ModularAPI\HTTP\Request::parseAuthentication();
 
-        if($Authentication->Type == \ModularAPI\Abstracts\AuthenticationType::None)
+    use ModularAPI\Abstracts\AuthenticationType;
+    use ModularAPI\Exceptions\UnsupportedClientException;
+    use ModularAPI\HTTP\Request;
+    use ModularAPI\ModularAPI;
+    use ModularAPI\Objects\AccessKey;
+
+    /**
+     * @param ModularAPI $modularAPI
+     * @param bool $forceCertificate
+     * @return AccessKey
+     * @throws UnsupportedClientException
+     */
+    function verifyAuthentication(ModularAPI $modularAPI, bool $forceCertificate = false): AccessKey
+    {
+        $Authentication = Request::parseAuthentication();
+
+        if($Authentication->Type == AuthenticationType::None)
         {
             authenticationRequiredError();
             return null;
@@ -11,7 +24,7 @@
 
         if($forceCertificate == true)
         {
-            if($Authentication->Type !== \ModularAPI\Abstracts\AuthenticationType::Certificate)
+            if($Authentication->Type !== AuthenticationType::Certificate)
             {
                 certificateRequiredError();
             }
@@ -26,7 +39,7 @@
             }
         }
 
-        if($Authentication->Type == \ModularAPI\Abstracts\AuthenticationType::Certificate)
+        if($Authentication->Type == AuthenticationType::Certificate)
         {
             try
             {
@@ -38,7 +51,7 @@
             }
         }
 
-        if($Authentication->Type == \ModularAPI\Abstracts\AuthenticationType::APIKey)
+        if($Authentication->Type == AuthenticationType::APIKey)
         {
             try
             {
