@@ -1,9 +1,24 @@
 <?php
+    /** @noinspection PhpUnhandledExceptionInspection */
+
     /**
      * ModularAPI HTTP Handler File
      *
      * This file determines if the User is making a valid request, and if the authentication method used is valid and correct
      */
+
+    use ModularAPI\Abstracts\AccessKeyStatus;
+    use ModularAPI\Abstracts\HTTP\ContentType;
+    use ModularAPI\Abstracts\HTTP\FileType;
+    use ModularAPI\Abstracts\HTTP\RequestMethod;
+    use ModularAPI\Abstracts\HTTP\ResponseCode\ServerError;
+    use ModularAPI\Exceptions\AccessKeyExpiredException;
+    use ModularAPI\Exceptions\MissingParameterException;
+    use ModularAPI\Exceptions\UsageExceededException;
+    use ModularAPI\HTTP\Request;
+    use ModularAPI\ModularAPI;
+    use ModularAPI\Objects\ExceptionDetails;
+    use ModularAPI\Objects\Response;
 
     include_once(__DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR . 'ModularAPI' . DIRECTORY_SEPARATOR . 'ModularAPI.php');
     include_once(__DIR__ . DIRECTORY_SEPARATOR . 'api' . DIRECTORY_SEPARATOR . 'authentication.php');
@@ -18,7 +33,7 @@
     }
 
     $AccessKey = null;
-    $ModularAPI = new \ModularAPI\ModularAPI();
+    $ModularAPI = new ModularAPI();
 
     if($Configuration->Policies->AuthenticatedRequired == true)
     {
@@ -30,7 +45,7 @@
         }
     }
 
-    $Query = \ModularAPI\HTTP\Request::parseQuery();
+    $Query = Request::parseQuery();
     if($Configuration->moduleExists($Query->Module) == false)
     {
         invalidModuleError();
@@ -38,14 +53,14 @@
 
     $Module = $Configuration->getModule($Query->Module);
 
-    if($Query->RequestMethod == \ModularAPI\Abstracts\HTTP\RequestMethod::GET)
+    if($Query->RequestMethod == RequestMethod::GET)
     {
         if($Module->GetMethodAllowed == false)
         {
             requestMethodNotAllowed($Query->RequestMethod);
         }
     }
-    elseif($Query->RequestMethod == \ModularAPI\Abstracts\HTTP\RequestMethod::POST)
+    elseif($Query->RequestMethod == RequestMethod::POST)
     {
         if($Module->PostMethodAllowed == false)
         {
@@ -86,7 +101,7 @@
             }
         }
 
-        if($AccessKey->State == \ModularAPI\Abstracts\AccessKeyStatus::Suspended)
+        if($AccessKey->State == AccessKeyStatus::Suspended)
         {
             accessKeySuspended();
         }
@@ -96,11 +111,11 @@
     {
         $ModularAPI->AccessKeys()->trackUsage($AccessKey, $Module->RequireUsage);
     }
-    catch(\ModularAPI\Exceptions\AccessKeyExpiredException $accessKeyExpiredException)
+    catch(AccessKeyExpiredException $accessKeyExpiredException)
     {
         keyExpiredError();
     }
-    catch(\ModularAPI\Exceptions\UsageExceededException $usageExceededException)
+    catch(UsageExceededException $usageExceededException)
     {
         usageExceededError();
     }
@@ -123,13 +138,13 @@
 
     try
     {
-        $Parameters = ModularAPI\HTTP\Request::getParameters($Module->Parameters);
+        $Parameters = Request::getParameters($Module->Parameters);
         /** @noinspection PhpIncludeInspection */
         include($ModuleFile);
         $Response = Module($AccessKey, $Parameters);
         $ExecutionEnd = microtime(true);
     }
-    catch(\ModularAPI\Exceptions\MissingParameterException $missingParameterException)
+    catch(MissingParameterException $missingParameterException)
     {
         $ExecutionEnd = microtime(true);
         missingParamerter($missingParameterException->ParamerterName);
@@ -137,16 +152,16 @@
     catch(Exception $exception)
     {
         $ExecutionEnd = microtime(true);
-        $Response = new \ModularAPI\Objects\Response();
-        $Response->ResponseCode = ModularAPI\Abstracts\HTTP\ResponseCode\ServerError::_500;
-        $Response->ResponseType = \ModularAPI\Abstracts\HTTP\ContentType::application . '/' . \ModularAPI\Abstracts\HTTP\FileType::json;
+        $Response = new Response();
+        $Response->ResponseCode = ServerError::_500;
+        $Response->ResponseType = ContentType::application . '/' . FileType::json;
         $Response->Content = array(
             'status' => false,
-            'code' => \ModularAPI\Abstracts\HTTP\ResponseCode\ServerError::_500,
+            'code' => ServerError::_500,
             'message' => 'Internal Server Error',
             'exception_code' => $exception->getCode()
         );
-        $ExceptionDetails = new \ModularAPI\Objects\ExceptionDetails();
+        $ExceptionDetails = new ExceptionDetails();
         $ExceptionDetails->Line = $exception->getLine();
         $ExceptionDetails->File = $exception->getFile();
         $ExceptionDetails->Message = $exception->getMessage();
@@ -159,7 +174,7 @@
         $Query,
         $Parameters,
         $Response,
-        ModularAPI\HTTP\Request::parseAuthentication(),
+        Request::parseAuthentication(),
         $AccessKey->PublicID,
         $FatalError,
         $ExceptionDetails
