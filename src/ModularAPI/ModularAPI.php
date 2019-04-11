@@ -48,7 +48,7 @@
     include_once(MODULAR_API . 'Objects' . DIRECTORY_SEPARATOR . 'Configuration.php');
     include_once(MODULAR_API . 'Objects' . DIRECTORY_SEPARATOR . 'ExceptionDetails.php');
     include_once(MODULAR_API . 'Objects' . DIRECTORY_SEPARATOR . 'Module.php');
-    include_once(MODULAR_API . 'Objects' . DIRECTORY_SEPARATOR . 'Paramerter.php');
+    include_once(MODULAR_API . 'Objects' . DIRECTORY_SEPARATOR . 'Parameter.php');
     include_once(MODULAR_API . 'Objects' . DIRECTORY_SEPARATOR . 'Policies.php');
     include_once(MODULAR_API . 'Objects' . DIRECTORY_SEPARATOR . 'RequestAuthentication.php');
     include_once(MODULAR_API . 'Objects' . DIRECTORY_SEPARATOR . 'RequestQuery.php');
