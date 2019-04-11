@@ -4,6 +4,7 @@
 
     use ModularAPI\DatabaseManager\Requests;
     use ModularAPI\Managers\AccessKeyManager;
+    use mysqli;
 
     define('MODULAR_API', __DIR__ . DIRECTORY_SEPARATOR);
 
@@ -69,7 +70,7 @@
         /**
          * The Database connection, null if Database connection isn't established
          *
-         * @var null|\mysqli
+         * @var null|mysqli
          */
         public $Database;
 
@@ -95,7 +96,7 @@
 
             if($EstablishDatabaseConnection == true)
             {
-                $this->Database = new \mysqli(
+                $this->Database = new mysqli(
                     $Configuration['ModularAPI_DatabaseHost'],
                     $Configuration['ModularAPI_DatabaseUsername'],
                     $Configuration['ModularAPI_DatabasePassword'],
