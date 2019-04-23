@@ -1,8 +1,8 @@
 CREATE TABLE access_keys
 (
     id INT(255) PRIMARY KEY COMMENT 'The ID of the Access Key' AUTO_INCREMENT,
-    public_id TEXT COMMENT 'The Public ID of the Access Key',
-    public_key TEXT COMMENT 'The Public Key for API Usage',
+    public_id VARCHAR(255) COMMENT 'The Public ID of the Access Key',
+    public_key VARCHAR(255) COMMENT 'The Public Key for API Usage',
     state INT(255) COMMENT 'The state of the access key',
     usage_data TEXT COMMENT 'Usage data which determines if the Access Key can still be used',
     permissions TEXT COMMENT 'Permissions data which determines what modules that this access key has access to',
