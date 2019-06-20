@@ -2,14 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="602b3bfd-c56d-4d6c-98e1-090bbbd8bfc8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ModularAPI/acm/Abstracts/ExceptionCodes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ModularAPI/acm/CommandLine.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ModularAPI/acm/Exceptions/LocalConfigurationException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ModularAPI/acm/Exceptions/NoConfigurationFoundException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ModularAPI/acm/Objects/Schema.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ModularAPI/acm/acm.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ModularAPI/acm/acm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Netkas.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Netkas.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http_api/api/authentication.php" beforeDir="false" afterPath="$PROJECT_DIR$/http_api/api/authentication.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http_api/api/generic_responses.php" beforeDir="false" afterPath="$PROJECT_DIR$/http_api/api/generic_responses.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http_api/api/request.php" beforeDir="false" afterPath="$PROJECT_DIR$/http_api/api/request.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http_api/api/response.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http_api/modules/v1/get_time.php" beforeDir="false" afterPath="$PROJECT_DIR$/http_api/modules/v1/get_time.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ModularAPI/Managers/AccessKeyManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModularAPI/Managers/AccessKeyManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ModularAPI/ModularAPI.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModularAPI/ModularAPI.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ModularAPI/configuration.ini" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModularAPI/configuration.ini" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,66 +58,46 @@
     <favorites_list name="Modular API" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modular-api.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/http_api/api/authentication.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/http_api/api/generic_responses.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1553">
-              <caret line="228" column="18" selection-start-line="228" selection-start-column="18" selection-end-line="228" selection-end-column="18" />
-              <folding>
-                <element signature="e#7#62#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/http_api/api/request.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-300">
-              <caret line="16" column="43" lean-forward="true" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
-              <folding>
-                <element signature="e#7#60#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/http_api/modules/v1/get_time.php">
+        <entry file="file://$PROJECT_DIR$/src/ModularAPI/ModularAPI.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="34" lean-forward="true" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+            <state>
+              <caret line="173" column="9" selection-start-line="173" selection-start-column="9" selection-end-line="173" selection-end-column="9" />
               <folding>
-                <element signature="e#7#49#0#PHP" expanded="true" />
+                <element signature="e#38#50#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ModularAPI/HTTP/Request.php">
+        <entry file="file://$PROJECT_DIR$/src/ModularAPI/Managers/AccessKeyManager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="70" column="43" selection-start-line="70" selection-start-column="43" selection-end-line="70" selection-end-column="43" />
+            <state relative-caret-position="114">
+              <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
+              <folding>
+                <element signature="e#47#61#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/time_signature.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ModularAPI/modular-api.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ModularAPI/configuration.ini">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -140,7 +124,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/ModularAPI/Objects/RequestQuery.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/Exceptions/InvalidRequestQueryException.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/Objects/RequestAuthentication.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/Abstracts/AuthenticationType.php" />
@@ -170,7 +153,6 @@
         <option value="$PROJECT_DIR$/src/ModularAPI/Data/Response.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/Data/Request.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/HTTP/Headers.php" />
-        <option value="$PROJECT_DIR$/src/ModularAPI/ModularAPI.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/Objects/Response.php" />
         <option value="dbtable:/82259bc3/fbda4cb6-17f1-4045-b152-24c81f42eb92/api.requests" />
         <option value="$PROJECT_DIR$/src/ModularAPI/HTTP/Response.php" />
@@ -182,7 +164,6 @@
         <option value="$PROJECT_DIR$/src/ModularAPI/Objects/AccessKey/Permissions.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/Objects/AccessKey/Signatures.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/DatabaseManager/AccessKeys.php" />
-        <option value="$PROJECT_DIR$/src/ModularAPI/Managers/AccessKeyManager.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/Utilities/Hashing.php" />
         <option value="$PROJECT_DIR$/http_api/index.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/Objects/AccessKey/Analytics.php" />
@@ -191,15 +172,18 @@
         <option value="$PROJECT_DIR$/http_api/api/generic_responses.php" />
         <option value="$PROJECT_DIR$/http_api/api/request.php" />
         <option value="$PROJECT_DIR$/http_api/modules/v1/get_time.php" />
+        <option value="$PROJECT_DIR$/src/ModularAPI/configuration.ini" />
+        <option value="$PROJECT_DIR$/src/ModularAPI/Managers/AccessKeyManager.php" />
+        <option value="$PROJECT_DIR$/src/ModularAPI/ModularAPI.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="754" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="55" />
+    <option name="y" value="15" />
+    <option name="width" value="1234" />
+    <option name="height" value="637" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -217,26 +201,25 @@
             <path>
               <item name="Modular API" type="b2602c69:ProjectViewProjectNode" />
               <item name="modular-api" type="462c0819:PsiDirectoryNode" />
-              <item name="http_api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Modular API" type="b2602c69:ProjectViewProjectNode" />
               <item name="modular-api" type="462c0819:PsiDirectoryNode" />
-              <item name="http_api" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ModularAPI" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Modular API" type="b2602c69:ProjectViewProjectNode" />
               <item name="modular-api" type="462c0819:PsiDirectoryNode" />
-              <item name="http_api" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ModularAPI" type="462c0819:PsiDirectoryNode" />
+              <item name="Managers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Modular API" type="b2602c69:ProjectViewProjectNode" />
               <item name="modular-api" type="462c0819:PsiDirectoryNode" />
-              <item name="http_api" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="v1" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -248,19 +231,20 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/ModularAPI" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Netkas\Documents\gits\modular-api\src\ModularAPI" />
+      <recent name="C:\Users\Netkas\Documents\gits\modular-api\http_api\modules" />
+      <recent name="C:\Users\Netkas\Documents\gits\modular-api\http_api\modules\v1" />
+      <recent name="C:\Users\Netkas\Documents\gits\modular-api\http_api\v1" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Netkas\Documents\gits\modular-api\http_api" />
       <recent name="C:\Users\Netkas\Documents\gits\modular-api\http_api\api" />
       <recent name="C:\Users\Netkas\Documents\gits\modular-api\web_api" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Netkas\Documents\gits\modular-api\http_api\modules" />
-      <recent name="C:\Users\Netkas\Documents\gits\modular-api\http_api\modules\v1" />
-      <recent name="C:\Users\Netkas\Documents\gits\modular-api\http_api\v1" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -351,11 +335,13 @@
       <workItem from="1549841394811" duration="111000" />
       <workItem from="1549841958645" duration="663000" />
       <workItem from="1554679461155" duration="559000" />
+      <workItem from="1558646096084" duration="303000" />
+      <workItem from="1561016302150" duration="1054000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141311000" />
+    <option name="totallyTimeSpent" value="142668000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -367,16 +353,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24810892" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.25642964" />
       <window_info id="Structure" order="2" weight="0.20726173" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32941177" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.3282313" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.8067227" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -386,33 +370,14 @@
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32605043" />
       <window_info anchor="bottom" id="Database Console" order="9" weight="0.32941177" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32941177" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" x="92" y="92" width="1182" height="554" id="Documentation" order="3" type="FLOATING" />
       <window_info anchor="right" id="Database" order="4" weight="0.21860817" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.23676248" />
-      <window_info id="Structure" order="2" weight="0.20726173" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32941177" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.8067227" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32941177" />
-      <window_info anchor="bottom" id="Database Console" order="9" weight="0.32941177" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32941177" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" x="92" y="92" width="1182" height="554" id="Documentation" order="3" type="FLOATING" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.21860817" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -468,18 +433,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/http_api/api/helper.php" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-34">
-            <caret line="147" lean-forward="true" selection-start-line="147" selection-end-line="147" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ModularAPI/Objects/Module.php" />
     <entry file="file://$PROJECT_DIR$/src/ModularAPI/Abstracts/HTTP/ResponseCode/Information.php" />
     <entry file="file://$PROJECT_DIR$/src/ModularAPI/Abstracts/HTTP/ResponseCode/ServerError.php" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/fbda4cb6-17f1-4045-b152-24c81f42eb92/console.sql">
@@ -546,20 +499,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ModularAPI/configuration.ini">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/http_api/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="50" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ModularAPI/Objects/AccessKey/Permissions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="69" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -592,13 +535,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ModularAPI/ModularAPI.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/http_api/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
@@ -607,19 +543,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ModularAPI/Managers/AccessKeyManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2156">
-          <caret line="202" column="9" selection-start-line="177" selection-start-column="8" selection-end-line="202" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ModularAPI/Objects/AccessKey/Analytics.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
           <caret line="68" column="13" lean-forward="true" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -631,60 +558,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modular-api.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ModularAPI/HTTP/Request.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="70" column="43" selection-start-line="70" selection-start-column="43" selection-end-line="70" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/modular-api.json" />
+    <entry file="file://$PROJECT_DIR$/http_api/api/response.php" />
     <entry file="file://$PROJECT_DIR$/http_api/api/authentication.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
+        <state relative-caret-position="102">
           <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/http_api/api/generic_responses.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1553">
+        <state relative-caret-position="3825">
           <caret line="228" column="18" selection-start-line="228" selection-start-column="18" selection-end-line="228" selection-end-column="18" />
-          <folding>
-            <element signature="e#7#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/http_api/api/response.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/http_api/api/request.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-300">
-          <caret line="16" column="43" lean-forward="true" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
-          <folding>
-            <element signature="e#7#60#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="238">
+          <caret line="16" column="43" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/http_api/modules/v1/get_time.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="34" lean-forward="true" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+          <caret line="14" column="71" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModularAPI/Objects/AccessKey/Permissions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModularAPI/HTTP/Request.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="70" column="43" selection-start-line="70" selection-start-column="43" selection-end-line="70" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModularAPI/configuration.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModularAPI/acm/acm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1879" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModularAPI/modular-api.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/time_signature.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModularAPI/Managers/AccessKeyManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
           <folding>
-            <element signature="e#7#49#0#PHP" expanded="true" />
+            <element signature="e#47#61#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModularAPI/ModularAPI.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="173" column="9" selection-start-line="173" selection-start-column="9" selection-end-line="173" selection-end-column="9" />
+          <folding>
+            <element signature="e#38#50#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
