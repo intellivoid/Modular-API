@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="602b3bfd-c56d-4d6c-98e1-090bbbd8bfc8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ModularAPI/AutoConfig.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Netkas.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Netkas.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ModularAPI/ModularAPI.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModularAPI/ModularAPI.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ModularAPI/modular-api.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModularAPI/modular-api.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +49,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ModularAPI/ModularAPI.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="96">
@@ -110,7 +108,7 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ModularAPI/modular-api.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
@@ -199,10 +197,10 @@
         <option value="$PROJECT_DIR$/http_api/modules/v1/get_time.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/configuration.ini" />
         <option value="$PROJECT_DIR$/src/ModularAPI/Managers/AccessKeyManager.php" />
-        <option value="$PROJECT_DIR$/src/ModularAPI/modular-api.json" />
         <option value="$PROJECT_DIR$/src/ModularAPI/setup" />
         <option value="$PROJECT_DIR$/src/ModularAPI/AutoConfig.php" />
         <option value="$PROJECT_DIR$/src/ModularAPI/ModularAPI.php" />
+        <option value="$PROJECT_DIR$/src/ModularAPI/modular-api.json" />
       </list>
     </option>
   </component>
@@ -396,12 +394,12 @@
       <workItem from="1561016302150" duration="1161000" />
       <workItem from="1561064469131" duration="398000" />
       <workItem from="1561067927494" duration="904000" />
-      <workItem from="1561073713811" duration="242000" />
+      <workItem from="1561073713811" duration="262000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144319000" />
+    <option name="totallyTimeSpent" value="144339000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -682,13 +680,6 @@
     <entry file="file://$PROJECT_DIR$/tests/time_signature.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ModularAPI/modular-api.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ModularAPI/configuration.ini">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -710,6 +701,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModularAPI/modular-api.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
         </state>
       </provider>
     </entry>
